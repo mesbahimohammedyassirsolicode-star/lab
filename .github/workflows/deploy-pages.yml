@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Build Marp presentations
         run: |
           mkdir -p _site
