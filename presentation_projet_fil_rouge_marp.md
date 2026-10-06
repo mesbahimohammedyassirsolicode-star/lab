@@ -23,30 +23,24 @@ description: Squelette de présentation PFE
 
 # Contexte du projet
 
-- Présentation du domaine et du besoin métier
-- Enjeux à l’origine du projet
+
 
 ---
 
 # Défis opérationnels
 
-- Identifier les points de friction du processus actuel
-- Réduire les tâches manuelles et les délais de traitement
-- Améliorer la coordination entre les acteurs
+
 
 ---
 
 # Objectifs de la solution
 
-- Centraliser les opérations
-- Fluidifier l’expérience client et celle du personnel
-- Proposer une solution évolutive
+
 
 ---
 
 # Définition du problème
 
-> Comment concevoir une solution capable de répondre aux besoins opérationnels, tout en restant simple à utiliser et évolutive ?
 
 ---
 
@@ -58,9 +52,7 @@ description: Squelette de présentation PFE
 
 # Scrum
 
-- Développement itératif et incrémental
-- Organisation du travail en sprints
-- Priorisation continue des fonctionnalités
+
 
 <!-- Figure 1 — Méthodologie Scrum -->
 
@@ -68,9 +60,7 @@ description: Squelette de présentation PFE
 
 # Design Thinking
 
-- Comprendre les utilisateurs
-- Définir le problème
-- Générer et tester des solutions
+
 
 <!-- Figure 2 — Design Thinking -->
 
@@ -78,8 +68,7 @@ description: Squelette de présentation PFE
 
 # 2TUP
 
-- Séparation des branches fonctionnelle et technique
-- Convergence progressive vers la réalisation
+
 
 <!-- Figure 3 — Processus 2TUP -->
 
@@ -87,9 +76,6 @@ description: Squelette de présentation PFE
 
 # Gestion des tâches
 
-- Planification des activités
-- Suivi de l’avancement
-- Gestion des dépendances et des échéances
 
 <!-- Figure 4 — Diagramme de Gantt -->
 
@@ -103,31 +89,20 @@ description: Squelette de présentation PFE
 
 # Empathie
 
-- Recueillir les attentes, difficultés et motivations
-- Orienter la solution vers des usages concrets
 
 ---
 
 # Profil : le client
 
-- Consulter les services ou produits disponibles
-- Passer et suivre ses commandes simplement
-- Bénéficier d’une expérience fluide et rapide
-
 ---
 
 # Profil : le personnel
 
-- Gérer les ressources et les opérations
-- Répondre efficacement aux demandes des clients
-- Disposer d’informations à jour en temps réel
 
 ---
 
 # Synthèse de la vision
 
-- Une solution centrée sur l’utilisateur
-- Une architecture capable d’évoluer avec les besoins
 
 <!-- Figure 5 — Carte d’empathie -->
 
@@ -135,16 +110,11 @@ description: Squelette de présentation PFE
 
 # Définition du problème
 
-- Formalisation du besoin principal
-- Identification des contraintes fonctionnelles et techniques
 
 ---
 
 # Idéation
 
-- Exploration de solutions possibles
-- Sélection des fonctionnalités à forte valeur ajoutée
-- Préparation de la structure technique et des bénéfices business
 
 ---
 
@@ -156,18 +126,11 @@ description: Squelette de présentation PFE
 
 # Les acteurs du système
 
-- Client
-- Personnel
-- Administrateur
-- Services externes, selon les besoins
 
 ---
 
 # Détail des cas d’utilisation
 
-- Authentification et gestion des profils
-- Gestion des ressources et des commandes
-- Consultation, suivi et opérations de paiement
 
 ---
 
@@ -185,9 +148,7 @@ description: Squelette de présentation PFE
 
 # Stratégie de développement
 
-- Livrer les fonctionnalités par incréments
-- Commencer par les fondations à forte priorité
-- Valider chaque sprint avant le suivant
+
 
 ---
 
@@ -223,32 +184,22 @@ description: Squelette de présentation PFE
 
 # Besoins techniques
 
-- Sécurité et gestion des accès
-- Fiabilité des données
-- Performance et maintenabilité
-- Scalabilité de la solution
+
 
 ---
 
 # Analyse technique
 
-- Étude des technologies adaptées au projet
-- Choix des outils de développement et de collaboration
-
 ---
 
 # Conception générale
 
-- Décomposition de l’application en modules
-- Définition des responsabilités de chaque couche
 
 ---
 
 # Architecture logicielle
 
-- Modèle MVC
-- Architecture N-tiers
-- Architecture globale de l’application
+
 
 <!-- Figure 10 — MVC -->
 <!-- Figure 11 — Architecture N-tiers -->
@@ -266,8 +217,6 @@ description: Squelette de présentation PFE
 
 # Maquettes UI/UX
 
-- Interfaces principales de l’application
-- Parcours utilisateur et cohérence visuelle
 
 <!-- Figure 14 — Maquettes UI/UX -->
 
@@ -281,33 +230,21 @@ description: Squelette de présentation PFE
 
 # Outils de développement
 
-- Environnement de développement intégré
-- Gestion de versions
-- Outils de conception et de planification
 
 ---
 
 # Technologies utilisées
 
-- Front-end
-- Back-end
-- Base de données
-- Services et outils complémentaires
 
 ---
 
 # Bilan d’implémentation des sprints
 
-- Fonctionnalités réalisées
-- Résultats obtenus
-- Points d’amélioration identifiés
 
 ---
 
 # Conclusion
 
-- Synthèse des apports du projet
-- Perspectives d’évolution
 
 ---
 
