@@ -1,3 +1,9 @@
+---
+marp: true
+theme: default
+paginate: true
+size: 16:9
+---
 # Plan de présentation
 
 ## Slide 1 — Page de garde
