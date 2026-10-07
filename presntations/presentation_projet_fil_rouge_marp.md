@@ -5,6 +5,32 @@ paginate: true
 size: 16:9
 title: Présentation du projet fil rouge
 description: Squelette de présentation PFE
+style: |
+  section {
+    background: #f8fafc;
+    color: #172554;
+    font-family: "Aptos", "Segoe UI", sans-serif;
+    padding: 68px 86px;
+  }
+  section.lead {
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 58%, #38bdf8 100%);
+    color: white;
+    text-align: left;
+  }
+  h1 {
+    color: #0f3b8f;
+    font-size: 54px;
+    border-bottom: 6px solid #38bdf8;
+    padding-bottom: 14px;
+  }
+  .lead h1, .lead h2 { color: white; border: 0; }
+  .lead h1 { font-size: 76px; padding: 0; }
+  h2 { color: #1d4ed8; font-size: 34px; }
+  h3 { color: #0f3b8f; font-size: 26px; }
+  ul { font-size: 24px; line-height: 1.45; }
+  li::marker { color: #0284c7; }
+  strong { color: #1d4ed8; }
+  footer { color: #64748b; }
 ---
 
 <!-- _class: lead -->
