@@ -34,9 +34,22 @@ jobs:
       - name: Build Marp presentations
         run: |
           mkdir -p _site
-          npx --yes @marp-team/marp-cli@latest labmarp.md --html --output _site/labmarp.html
-          npx --yes @marp-team/marp-cli@latest presentation_projet_fil_rouge_marp.md --html --output _site/presentation-projet-fil-rouge.html
+
+          echo "Building labmarp.md..."
+          npx --yes @marp-team/marp-cli@latest labs/labmarp.md \
+            --html \
+            --output _site/labmarp.html
+
+          echo "Building project presentation..."
+          npx --yes @marp-team/marp-cli@latest presentations/presentation_projet_fil_rouge_marp.md \
+            --html \
+            --output _site/presentation-projet-fil-rouge.html
+
+          echo "Copying website..."
           cp site/index.html _site/index.html
+
+          echo "Generated files:"
+          ls -lah _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -46,6 +59,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
