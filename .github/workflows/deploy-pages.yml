@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -31,25 +31,89 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Build Marp presentations
+      - name: Check repository structure
         run: |
+          echo "================================"
+          echo "CURRENT DIRECTORY"
+          echo "================================"
+          pwd
+
+          echo ""
+          echo "================================"
+          echo "FILES IN REPOSITORY"
+          echo "================================"
+          find . -maxdepth 3 -type f | sort
+
+      - name: Build Marp presentations
+        shell: bash
+        run: |
+          set -e
+
           mkdir -p _site
 
-          echo "Building labmarp.md..."
-          npx --yes @marp-team/marp-cli@latest labs/labmarp.md \
+          echo "================================"
+          echo "SEARCHING MARKDOWN FILES"
+          echo "================================"
+
+          LAB_FILE=$(find labs -maxdepth 1 -type f -name "*.md" | head -n 1)
+
+          PROJECT_FILE=$(find . -type f -name "presentation*.md" | head -n 1)
+
+          echo "LAB FILE:"
+          echo "$LAB_FILE"
+
+          echo ""
+          echo "PROJECT FILE:"
+          echo "$PROJECT_FILE"
+
+          if [ -z "$LAB_FILE" ]; then
+            echo "ERROR: No Markdown file found inside labs/"
+            exit 1
+          fi
+
+          if [ -z "$PROJECT_FILE" ]; then
+            echo "ERROR: No presentation*.md file found"
+            exit 1
+          fi
+
+          echo ""
+          echo "================================"
+          echo "BUILDING LAB PRESENTATION"
+          echo "================================"
+
+          npx --yes @marp-team/marp-cli@latest \
+            "$LAB_FILE" \
             --html \
             --output _site/labmarp.html
 
-          echo "Building project presentation..."
-          npx --yes @marp-team/marp-cli@latest presentations/presentation_projet_fil_rouge_marp.md \
+          echo ""
+          echo "================================"
+          echo "BUILDING PROJECT PRESENTATION"
+          echo "================================"
+
+          npx --yes @marp-team/marp-cli@latest \
+            "$PROJECT_FILE" \
             --html \
             --output _site/presentation-projet-fil-rouge.html
 
-          echo "Copying website..."
+          echo ""
+          echo "================================"
+          echo "COPYING INDEX"
+          echo "================================"
+
+          if [ ! -f "site/index.html" ]; then
+            echo "ERROR: site/index.html does not exist"
+            exit 1
+          fi
+
           cp site/index.html _site/index.html
 
-          echo "Generated files:"
-          ls -lah _site
+          echo ""
+          echo "================================"
+          echo "FINAL _site CONTENT"
+          echo "================================"
+
+          find _site -maxdepth 2 -type f -print
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
