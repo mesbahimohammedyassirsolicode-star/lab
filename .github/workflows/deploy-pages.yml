@@ -88,6 +88,16 @@ jobs:
 
           echo ""
           echo "================================"
+          echo "BUILDING PRESENTATION PLAN"
+          echo "================================"
+
+          npx --yes @marp-team/marp-cli@latest \
+            "presntations/planpresntation.md" \
+            --html \
+            --output _site/plan-presentation.html
+
+          echo ""
+          echo "================================"
           echo "BUILDING PROJECT PRESENTATION"
           echo "================================"
 
