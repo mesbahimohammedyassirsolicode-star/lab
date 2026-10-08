@@ -17,14 +17,14 @@ style: |
     text-align: left;
   }
   h1 {
-    color: #0f3b8f;
+    color: #acff1d;
     font-size: 54px;
     border-bottom: 6px solid #38bdf8;
     padding-bottom: 14px;
   }
   .lead h1, .lead h2 { color: white; border: 0; }
   .lead h1 { font-size: 76px; padding: 0; }
-  h2 { color: #1d4ed8; font-size: 34px; }
+  h2 { color: #8adeff; font-size: 34px; }
   ul { font-size: 24px; line-height: 1.45; }
   li::marker { color: #0284c7; }
   code { color: #0f3b8f; }
@@ -125,3 +125,69 @@ marp labmarp.md --pptx
 2. Ajoutez l’en-tête Marp.
 3. Séparez vos diapositives avec `---`.
 4. Lancez `marp --server votre-fichier.md`.
+
+---
+
+# Personnaliser le thème
+
+```yaml
+---
+marp: true
+theme: gaia
+color: #0f172a
+paginate: true
+---
+```
+
+- Changez le thème pour modifier la palette.
+- Ajoutez des styles personnalisés avec `style:`.
+- Créez une identité visuelle cohérente.
+
+---
+
+# Ajouter des images et des visuels
+
+```markdown
+![bg right:40% contain](./assets/illustration.png)
+```
+
+- Utilisez des images de fond pour renforcer un message.
+- Réglez la taille avec `width:` ou `height:`.
+- Privilégiez des visuels lisibles et cohérents.
+
+---
+
+# Utiliser du HTML et des composants
+
+```html
+<div class="note">
+  Astuce : vous pouvez inclure du HTML simple.
+</div>
+```
+
+- Ajoutez des blocs d’attention ou des encadrés.
+- Personnalisez le rendu avec du CSS local.
+- Restez clair et lisible pour l’audience.
+
+---
+
+# Bonnes pratiques
+
+- Une idée par diapositive.
+- Des phrases courtes et des listes claires.
+- Des visuels utiles, pas décoratifs.
+- Testez toujours la version exportée.
+
+---
+
+<!-- _class: lead -->
+
+# En résumé
+
+Marp permet de créer des présentations propres et rapides à maintenir.
+
+## Markdown + simplicité + export multi-format
+
+- rapide à écrire
+- facile à versionner
+- prêt pour PDF, PPTX et web
