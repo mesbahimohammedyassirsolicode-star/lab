@@ -8,4 +8,6 @@
 6. OpenCode
 7. Pandoc
 8. OmniRoute
-   
+9.2TUP
+10.DESIGN THINKING
+11.SCRUM   
