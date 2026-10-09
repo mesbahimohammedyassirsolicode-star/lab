@@ -1,6 +1,6 @@
 # Mon profil
 
-Bonjour, je suis khadija gerrouj une étudiante en développement web.
+Bonjour, je suis mohammed yassir mesbahi une étudiante en développement web.
 
 ## Mes compétences
 
@@ -17,7 +17,7 @@ J'aime apprendre *de nouvelles technologies*.
 
 ## Mon site préféré
 
-[GitHub](https://github.com/khadijagerrouj/)
+[GitHub](https://github.com/mohammedyassirmesbahi/)
 
 > Apprendre chaque jour pour progresser.
 
