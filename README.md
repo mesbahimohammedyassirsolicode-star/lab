@@ -10,6 +10,7 @@ This repository contains the project files, presentation materials, and the stat
 
 ## Presentations
 
+- Veille technologique: https://github.com/mesbahimohammedyassirsolicode-star/lab/blob/main/labs/veille_technologique.md
 - Plan presentation: https://github.com/mesbahimohammedyassirsolicode-star/lab/blob/main/presntations/planpresntation.md
 - Final project presentation: https://github.com/mesbahimohammedyassirsolicode-star/lab/blob/main/presntations/presentation_projet_fil_rouge_marp.md
 - Presentations folder: https://github.com/mesbahimohammedyassirsolicode-star/lab/tree/main/presntations
