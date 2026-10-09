@@ -108,6 +108,16 @@ jobs:
 
           echo ""
           echo "================================"
+          echo "BUILDING VEILLE TECHNOLOGIQUE"
+          echo "================================"
+
+          npx --yes @marp-team/marp-cli@latest \
+            "labs/veille_technologique.md" \
+            --html \
+            --output _site/veille-technologique.html
+
+          echo ""
+          echo "================================"
           echo "COPYING INDEX"
           echo "================================"
 
