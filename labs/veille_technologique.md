@@ -5,21 +5,35 @@ paginate: true
 size: 16:9
 style: |
   section {
-    background: #0b1220;
-    color: #eaf0f8;
+    background: #ffffff;
+    color: #1f2b3d;
     font-family: 'Aptos', 'Arial', sans-serif;
-    padding: 48px 64px;
+    padding: 56px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
   }
-  h1, h2 { color: #55d6be; }
+  h1, h2 { color: #0f7b6c; margin: 0.25em 0; }
   h1 { font-size: 2.15em; }
-  h2 { font-size: 1.55em; border-bottom: 2px solid #26354b; padding-bottom: 10px; }
-  strong { color: #ffd166; }
-  a { color: #55d6be; }
-  section.lead { background: linear-gradient(135deg, #0b1220 0%, #152b43 100%); text-align: center; justify-content: center; }
-  section.lead h1 { font-size: 2.6em; }
-  section.lead h2 { border: 0; color: #eaf0f8; font-size: 1.2em; }
+  h2 { font-size: 1.55em; border-bottom: 2px solid #d7e3f4; padding-bottom: 10px; }
+  p { margin: 0.5em 0; line-height: 1.6; }
+  ul, ol { margin: 0.5em 0; padding-left: 1.4em; }
+  ul li, ol li { margin: 0.25em 0; line-height: 1.6; }
+  table { border-collapse: collapse; width: 100%; margin: 0.8em 0; }
+  table th { background: #f0f7ff; }
+  table th, table td { border: 1px solid #d7e3f4; padding: 0.5em 0.7em; }
+  blockquote { margin: 0.8em 0; padding-left: 1em; border-left: 4px solid #d7e3f4; color: #334155; }
+  strong { color: #005a9c; }
+  a { color: #0f7b6c; }
+  section.lead { background: linear-gradient(135deg, #f7fbff 0%, #e8f1fb 100%); text-align: center; justify-content: center; align-items: center; }
+  section.lead h1 { font-size: 2.6em; color: #004578; margin: 0.3em 0; }
+  section.lead h2 { border: 0; color: #1f2b3d; font-size: 1.2em; margin: 0.3em 0; }
   section.small { font-size: 0.88em; }
-  footer { color: #9fb0c7; font-size: 0.65em; }
+  footer { color: #5a6f8e; font-size: 0.65em; position: absolute; bottom: 24px; left: 72px; }
 ---
 
 <!-- _class: lead -->
@@ -41,7 +55,6 @@ Elle permet de rester informé sur :
 - les bonnes pratiques et les normes ;
 - les tendances et les innovations du secteur.
 
-> L’objectif n’est pas de tout suivre, mais de repérer les informations utiles.
 
 ---
 
