@@ -21,46 +21,51 @@ size: 16:9
 
 # 1. Initialiser un dépôt Git
 
-![width:700px](assets/git-init.png)
+```bash
+git init
+```
 
 ---
 
 # 2. Vérifier l'état du dépôt
 
-![width:700px](assets/git-status.png)
+```bash
+git status
+```
 
 ---
 
 # 3. Créer la structure du projet
 
-![width:700px](assets/git-structure.png)
+```bash
+mkdir src
+touch src/index.html
+touch README.md
+```
 
 ---
 
 # 4. Ajouter les fichiers à l'index
 
-![width:700px](assets/git-add.png)
+```bash
+git add .
+```
 
 ---
 
 # 5. Créer un premier commit
 
-![width:700px](assets/git-commit.png)
+```bash
+git commit -m "Initial commit"
+```
 
 ---
 
 # 6. Vérifier l'historique
 
-![width:700px](assets/git-log.png)
+```bash
+git log --oneline
+```
 
 ---
 
-# 7. Conclusion
-
-![width:700px](assets/git-summary.png)
-
----
-
-# À vous de jouer
-
-![width:700px](assets/git-exercice.png)
