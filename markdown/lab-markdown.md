@@ -59,27 +59,13 @@ style: |
     margin-bottom: 20px;
   }
 
-  .by {
-    font-size: 22px;
-    color: #8b949e;
-    margin-top: 25px;
-  }
-
-  .by strong {
-    font-family: 'Anton', Impact, sans-serif;
-    color: #58a6ff;
-    font-size: 32px;
-    display: block;
-    letter-spacing: 1px;
-  }
-
   ul, ol {
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 16px;
   }
 
   li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   code {
@@ -152,11 +138,7 @@ style: |
 
 <!-- _class: title -->
 
-# Markdown Syntax<br>& Document Structure
-
-<div class="by">
-  <strong>Mohammed Yassir Mesbahi</strong>
-</div>
+# Découvrir la syntaxe Markdown
 
 ---
 
@@ -164,29 +146,24 @@ style: |
 
 ## Lab Plan
 
-1. Introduction au Markdown & objectifs
-2. Problèmes rencontrés (Problems Encountered)
-3. Solutions appliquées (Solutions Implemented)
-4. Exemples : Titres, paragraphes et styles
-5. Exemples : Listes et liens hypertextes
-6. Exemples : Images et tableaux
-7. Exemples : Blocs de code & coloration syntaxique
+1. Introduction
+2. Problems Encountered
+3. Solutions Implemented
 
 ---
 
 ## Introduction
 
-### Objectif & Portée du Lab
+### Objectif et portée du Lab
 
-- **Objectif** : Découvrir la syntaxe Markdown pour rédiger, formater et structurer des documents techniques clairs.
-- **Compétences développées** :
-  - Structurer un document avec des niveaux de titres (`#` à `######`)
-  - Organiser le texte en paragraphes, emphase (**gras**, *italique*) et citations
-  - Créer des listes à puces, listes numérotées et listes de tâches
-  - Intégrer des hyperliens et des images
-  - Mettre en page des données sous forme de tableaux
-  - Insérer du code en ligne et des blocs de code multi-langages
-- **Livrable** : Présentation et exemples pratiques versionnés dans le dépôt GitHub.
+- **Découvrir la syntaxe Markdown** pour structurer et mettre en forme efficacement un document.
+- **Éléments abordés et pratiqués** :
+  - Hiérarchie des titres (`#` à `######`) et gestion des paragraphes
+  - Styles de texte (**gras**, *italique*, ~~barré~~, citations `>`)
+  - Listes non ordonnées (à puces), ordonnées (numérotées) et tâches (`- [x]`)
+  - Liens hypertextes (`[texte](url)`) et intégration d'images (`![alt](url)`)
+  - Tableaux structurés avec alignements (`:---`, `:---:`, `---:`)
+  - Blocs de code avec coloration syntaxique (`html`, `javascript`, `php`)
 
 ---
 
@@ -194,10 +171,10 @@ style: |
 
 ### Obstacles rencontrés lors de la mise en forme
 
-- **Fusion involontaire de lignes** : Le retour à la ligne simple est ignoré en Markdown sans double espace final ou saut de paragraphe.
-- **Rupture de structure des tableaux** : Manque d'alignement ou omission de la ligne séparatrice de tirets (`| --- |`), rendant le tableau brut et illisible.
-- **Coloration syntaxique absente** : Blocs de code sans indication explicite du langage (`html`, `javascript`, `php`).
-- **Affichage des images et chemins relatifs** : Liens brisés lors de fautes de frappe ou d'adresses d'images non accessibles.
+- **Retours à la ligne ignorés** : Un retour à la ligne simple dans l'éditeur ne crée pas de nouveau paragraphe sans ligne vide ou double espace.
+- **Rupture d'affichage des tableaux** : Tableaux non interprétés en cas d'oubli de la ligne séparatrice obligatoire de tirets (`| --- |`).
+- **Coloration syntaxique absente** : Blocs de code affichés en texte brut sans le nom du langage spécifié après les triples backticks.
+- **Problèmes de liens et images** : Liens cassés ou images non affichées causés par des erreurs dans la syntaxe ou des chemins relatifs erronés.
 
 ---
 
@@ -205,37 +182,36 @@ style: |
 
 ## Solutions Implemented
 
-### 01 — Gestion des retours à la ligne
-Insérer une ligne vide pour séparer les paragraphes, ou terminer une ligne avec deux espaces pour forcer un saut de ligne `<br>`.
+### 01 — Gestion des paragraphes & sauts de ligne
+Séparer les paragraphes par une ligne vide ou terminer une ligne par deux espaces pour forcer un saut `<br>`.
 
-### 02 — Structuration rigoureuse des tableaux
-Définir l'en-tête, la ligne de séparation (`| :--- | :---: | ---: |`) pour contrôler précisément l'alignement à gauche, au centre ou à droite.
+### 02 — Structuration des tableaux & alignements
+Insérer la ligne de séparation avec les deux-points pour définir l'alignement (`:---` à gauche, `:---:` centré, `---:` à droite).
 
-### 03 — Typage des blocs de code
-Ouvrir les blocs avec trois backticks suivis du nom du langage (ex: ```` ```javascript ````) pour bénéficier de la coloration syntaxique.
+### 03 — Blocs de code typés
+Délimiter le code par trois backticks en déclarant le langage cible (ex: ```` ```javascript ```` ou ```` ```php ````).
 
-### 04 — Sécurisation des liens et images
-Vérifier l'accessibilité des chemins et toujours fournir un texte alternatif descriptif (`![alt](url)`).
+### 04 — Normalisation des liens et images
+Appliquer la syntaxe stricte `[Intitulé](URL)` pour les liens et `![Description](URL)` pour les images avec texte alternatif.
 
 ---
 
 ## Exemples Pratiques : Titres & Formatage
-
-### Hiérarchie et emphase de texte
 
 ```markdown
 # Titre Principal (H1)
 ## Sous-titre (H2)
 ### Section détaillée (H3)
 
-Texte normal avec du **texte en gras** et du *texte en italique*.
-Possibilité d'ajouter du ~~texte barré~~ ou du ***texte gras et italique***.
+Texte normal avec du **texte en gras**, du *texte en italique*,
+du ~~texte barré~~ ou du ***gras et italique***.
 
-> Une citation en retrait pour faire ressortir une note importante.
+> Une citation en bloc pour mettre en avant une remarque clé.
 ```
 
-- Les titres permettent d'organiser la lecture et de générer des sommaires.
-- Les citations (`>`) mettent en évidence les remarques clés.
+- `#` définit les niveaux de hiérarchie.
+- `**` applique le gras, `*` applique l'italique.
+- `>` crée un bloc de citation.
 
 ---
 
@@ -243,39 +219,35 @@ Possibilité d'ajouter du ~~texte barré~~ ou du ***texte gras et italique***.
 
 ## Exemples Pratiques : Listes & Liens
 
-### Listes ordonnées, non ordonnées et liens hypertextes
-
 ```markdown
-### Mes Compétences (Liste non ordonnée) :
-- Frontend : HTML5, CSS3, JavaScript
+### Liste à puces :
+- Frontend : HTML, CSS, JavaScript
 - Backend : PHP, Laravel
-- Outils : Git, GitHub, VS Code
+- Outils : Git, GitHub
 
-### Étapes du Lab (Liste ordonnée) :
+### Liste numérotée :
 1. Découvrir la syntaxe Markdown
-2. Réaliser des exemples pratiques
-3. Déposer le livrable sur GitHub
+2. Réaliser les exemples pratiques
+3. Publier sur GitHub
 
-Lien vers mon profil : [Profil GitHub](https://github.com/mohammedyassirmesbahi/)
+Lien vers la documentation : [Guide Markdown](https://www.markdownguide.org)
 ```
 
 ---
 
-## Exemples Pratiques : Images & Tableaux
-
-### Intégration de visuels et de tables de données
+## Exemples Pratiques : Tableaux & Images
 
 ```markdown
 ![Logo Markdown](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 ```
 
-| Élément | Syntaxe | Rendu attendu |
+| Élément | Syntaxe Markdown | Rendu |
 | :--- | :---: | ---: |
-| Titre H1 | `# Titre` | Grand titre principal |
-| Gras | `**mot**` | **mot** en gras |
-| Italique | `*mot*` | *mot* incliné |
-| Code en ligne | `` `git status` `` | Style bloc machine |
-| Lien | `[texte](url)` | Lien cliquable |
+| Titre | `# Titre` | Titre H1 |
+| Gras | `**mot**` | **mot** |
+| Italique | `*mot*` | *mot* |
+| Code en ligne | `` `git commit` `` | Code inline |
+| Lien | `[nom](url)` | Lien cliquable |
 
 ---
 
@@ -283,22 +255,21 @@ Lien vers mon profil : [Profil GitHub](https://github.com/mohammedyassirmesbahi/
 
 ## Exemples Pratiques : Blocs de Code
 
-### Coloration syntaxique multi-langages
-
 ```javascript
-// Exemple JavaScript
-function saluer(apprenant) {
-  console.log(`Bienvenue au lab Markdown, ${apprenant} !`);
+// Coloration syntaxique JavaScript
+function validerLab(titre) {
+  console.log(`Validation du lab : ${titre}`);
+  return true;
 }
-saluer("Mohammed Yassir Mesbahi");
+validerLab("Syntaxe Markdown");
 ```
 
 ```php
 <?php
-// Exemple PHP
-$technologies = ['HTML', 'CSS', 'JavaScript', 'PHP', 'Markdown'];
-foreach ($technologies as $tech) {
-    echo "Technologie maîtrisée : {$tech}\n";
+// Coloration syntaxique PHP
+$competences = ["Titres", "Listes", "Liens", "Images", "Tableaux", "Code"];
+foreach ($competences as $competence) {
+    echo "Compétence validée : " . $competence . "\n";
 }
 ?>
 ```
