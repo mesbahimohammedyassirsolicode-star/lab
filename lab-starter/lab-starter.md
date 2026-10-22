@@ -141,7 +141,8 @@ style: |
 
 <div class="by">
   <strong>Mohammed Yassir Mesbahi</strong>
-  Development Environment Lab
+
+encadre:essarraj-fouad 
 </div>
 
 ---
@@ -156,6 +157,7 @@ style: |
 4. Using Todo Highlight for code reminders
 5. Installing and using Live Server
 6. Configuring Marp Markdown Preview
+7. Meaning of IDE and why we use it
 
 ---
 
@@ -185,7 +187,7 @@ Adjusted the relevant VS Code option/extension setting so `README.md` appeared i
 Installed **Todo Highlight** to highlight important comments and reminders in the code.
 
 ---
-
+<!-- TODO: -->
 <!-- _class: light -->
 
 ## Solutions Implemented
@@ -197,3 +199,4 @@ Installed **Live Server** to launch a local development server and automatically
 ### 05 — Preview Marp slides
 
 Installed/configured the **Marp extension** so Markdown presentation files could be viewed in slide preview.
+## 05- Meaning of IDE and why we use it
