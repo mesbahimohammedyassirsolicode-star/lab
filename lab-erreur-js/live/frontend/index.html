@@ -49,7 +49,49 @@
         <!-- ZONE DE TRAVAIL (Main) -->
         <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
             <div class="max-w-5xl mx-auto space-y-8">
-                
+
+                <section class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="flex items-center justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-sky-600">JavaScript Lab</p>
+                            <h2 class="text-xl font-bold text-slate-900">Les 5 erreurs et leurs corrections</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                        <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-slate-700">Erreur 1</h3>
+                            <p class="mb-3 text-sm text-slate-600">null.addEventListener()</p>
+                            <button type="button" data-demo="error1" class="rounded bg-sky-600 px-3 py-2 text-sm font-medium text-white hover:bg-sky-700">Reproduire</button>
+                        </article>
+                        <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-slate-700">Erreur 2</h3>
+                            <p class="mb-3 text-sm text-slate-600">Unexpected token '&lt;'</p>
+                            <button type="button" data-demo="error2" class="rounded bg-sky-600 px-3 py-2 text-sm font-medium text-white hover:bg-sky-700">Reproduire</button>
+                        </article>
+                        <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-slate-700">Erreur 3</h3>
+                            <p class="mb-3 text-sm text-slate-600">posts.forEach is not a function</p>
+                            <button type="button" data-demo="error3" class="rounded bg-sky-600 px-3 py-2 text-sm font-medium text-white hover:bg-sky-700">Reproduire</button>
+                        </article>
+                        <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-slate-700">Erreur 4</h3>
+                            <p class="mb-3 text-sm text-slate-600">Failed to fetch</p>
+                            <button type="button" data-demo="error4" class="rounded bg-sky-600 px-3 py-2 text-sm font-medium text-white hover:bg-sky-700">Reproduire</button>
+                        </article>
+                        <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h3 class="mb-2 text-sm font-bold uppercase tracking-wide text-slate-700">Erreur 5</h3>
+                            <p class="mb-3 text-sm text-slate-600">ReferenceError: function is not defined</p>
+                            <button type="button" data-demo="error5" class="rounded bg-sky-600 px-3 py-2 text-sm font-medium text-white hover:bg-sky-700">Reproduire</button>
+                        </article>
+                    </div>
+
+                    <div class="mt-6">
+                        <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-slate-700">Journal des erreurs</h3>
+                        <div id="demo-log" class="space-y-2"></div>
+                    </div>
+                </section>
+
                 <!-- SECTION 1 : EN-TÊTE DE LA PAGE -->
                 <div class="flex justify-between items-center">
                     <div>
