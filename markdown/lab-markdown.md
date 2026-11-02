@@ -134,6 +134,16 @@ style: |
     font-style: italic;
     margin: 12px 0;
   }
+
+  hr {
+    border: none;
+    border-top: 2px solid #30363d;
+    margin: 20px 0;
+  }
+
+  section.light hr {
+    border-top: 2px solid #d0d7de;
+  }
 ---
 
 <!-- _class: title -->
@@ -141,7 +151,7 @@ style: |
 # Lab Markdown
 
 **Étudiant :** Mohammed Yassir Mesbahi  
-**Encadrant :** Fouad Es-sarraj
+**Encadrant :** Fouad Essarraj
 
 ---
 
@@ -163,7 +173,7 @@ style: |
 - **Laravel** : Framework PHP backend pour API REST et logique métier
 - **Alpine.js** : Framework JavaScript léger pour l'interactivité frontend
 - **Tailwind CSS & Preline UI** : Framework CSS utilitaire et bibliothèque de composants
-- **MySQL** : Base de données relationnelle pour stocker les catégories
+- **MySQL** : Base de données relationnelle pour gérer les données
 - **Composer** : Gestionnaire de dépendances PHP
 
 ---
@@ -194,569 +204,194 @@ Processus de transformation du code source (Markdown) en format visuel final (HT
 
 ## Problème
 
-**Nous voulons créer de la documentation en Markdown mais nous ne savons pas comment faire.**
+**Nous devons créer un document Markdown pour présenter notre projet technique, mais nous ne savons pas utiliser tous les éléments Markdown.**
 
 ### Conséquences sans maîtrise du Markdown :
 
-- **Documentation inexistante ou mal structurée** : Difficulté à expliquer les fonctionnalités aux autres développeurs
-- **Perte de temps** : Utilisation d'outils lourds (Word, Google Docs) inadaptés au code
-- **Manque de professionnalisme** : Projets GitHub sans README clair
-- **Collaboration difficile** : Impossibilité de versionner efficacement la documentation
+- **Présentation de projet incomplète** : Impossibilité de structurer correctement le sujet et les objectifs
+- **Documentation non professionnelle** : Manque de mise en forme (gras, italique, tableaux)
+- **Difficulté à intégrer du code** : Pas de coloration syntaxique dans les blocs de code
+- **Collaboration difficile** : Impossibilité de versionner efficacement la documentation avec Git
 
 ---
 
 ## Solution
 
-**Pratiquer la création de documentation Markdown à travers un cas pratique concret**
+**Apprendre à utiliser tous les éléments Markdown en créant une présentation du projet "Gestion des Restaurants"**
 
-### Cas pratique : Documenter la fonctionnalité "Ajout de Catégorie"
+### Travail à réaliser :
 
-Nous allons créer une documentation complète et professionnelle pour une fonctionnalité réelle d'une application Laravel + Alpine.js.
+Créer un document Markdown (`presentation-gestion-restaurants.md`) contenant **2 slides** :
 
-**Livrable :** Fichier `docs/feature-add-category.md`
+1. **Slide 1 : Sujet du Projet** — Présenter le sujet avec tous les éléments Markdown
+2. **Slide 2 : Objectif du Projet** — Expliquer les objectifs avec tous les éléments Markdown
+
+**Livrable :** Un document simple prêt à être versionné et partagé.
 
 ---
 
 <!-- _class: light -->
 
-## Solution — Structure de la Documentation
+## Solution — Document à Créer
 
-```markdown
-# Fonctionnalité : Ajout de Catégorie
+### Fichier : `presentation-gestion-restaurants.md`
 
-## Description
-Permet aux administrateurs d'ajouter une nouvelle catégorie 
-de produits dans le système via un formulaire interactif.
+Ce document contiendra 2 slides simples utilisant **tous les éléments Markdown** requis :
 
-## Prérequis
-- Laravel 10+ installé
-- MySQL configuré
-- Alpine.js chargé via CDN
-- Droits d'administration
-
-## Stack Utilisée
-- **Backend** : Laravel (API REST)
-- **Frontend** : Alpine.js + Tailwind CSS
-- **Base de données** : MySQL
-```
+✅ Titres et paragraphes  
+✅ Texte en gras, italique et barré  
+✅ Listes à puces et numérotées  
+✅ Listes de tâches  
+✅ Liens et images  
+✅ Tableaux  
+✅ Code et blocs de code  
+✅ Citations  
+✅ Lignes horizontales
 
 ---
 
-## Solution — Architecture des Composants
+## Slide 1 — Sujet du Projet
 
 ```markdown
-## Architecture
+# Slide 1 — Sujet du Projet
 
-| Composant | Fichier | Responsabilité |
-|:----------|:--------|:---------------|
-| Route | `routes/web.php` | Définit `/categories/create` |
-| Contrôleur | `CategoryController.php` | Logique métier & validation |
-| Modèle | `Category.php` | Représente la table `categories` |
-| Vue | `categories/create.blade.php` | Formulaire Alpine.js |
-| Migration | `xxxx_create_categories_table.php` | Schéma BDD |
+Mon projet est une **plateforme de gestion des restaurants** où les gérants 
+peuvent gérer les menus, les réservations et les commandes. C'est *personnel* 
+— pas ~~juste une copie~~ des solutions existantes.
 
-## Schéma de Base de Données
+### Fonctionnalités principales :
+- Gestion des menus et plats
+- Système de réservations en ligne
+- Prise de commande digitale
 
-```sql
-CREATE TABLE categories (
-    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    slug VARCHAR(255) UNIQUE NOT NULL,
-    description TEXT,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
-);
-```
+![Interface de gestion](./screenshots/dashboard.png)
+
+> "La gestion de restaurant devrait être simple et digitale."
+
+---
 ```
 
 ---
 
 <!-- _class: light -->
 
-## Solution — Endpoints API
+## Slide 2 — Objectif du Projet
 
 ```markdown
-## Endpoints API
+# Slide 2 — Objectif du Projet
 
-### GET /api/categories
-Récupère la liste des catégories.
+L'objectif est de simplifier la gestion quotidienne des restaurants, tout 
+en apprenant Markdown avec cette présentation. 
+Voir le [Guide Markdown](https://www.markdownguide.org/).
 
-**Réponse (200 OK) :**
+### Étapes du projet :
+1. Développer le module de gestion des menus
+2. Créer le système de réservations
+3. Implémenter la prise de commande
+
+### Progression actuelle :
+- [x] Module de gestion des catégories
+- [x] API REST des plats
+- [ ] Interface de réservation
+- [ ] Écran cuisine
+
+| Fonctionnalité | Technologies |
+|:---------------|:-------------|
+| Backend | Laravel + MySQL |
+| Frontend | Alpine.js + Tailwind |
+
+### Stack technique :
+Configuration Laravel : `composer.json`
+
 ```json
-[
-  {
-    "id": 1,
-    "name": "Électronique",
-    "slug": "electronique",
-    "description": "Appareils électroniques"
+{
+  "require": {
+    "laravel/framework": "^10.0",
+    "laravel/sanctum": "^3.0"
   }
-]
-```
-
-### POST /api/categories
-Crée une nouvelle catégorie.
-
-**Requête :**
-```json
-{
-  "name": "Électronique",
-  "description": "Appareils électroniques",
-  "slug": "electronique"
-}
-```
-
-**Réponse (201 Created) :**
-```json
-{
-  "id": 5,
-  "name": "Électronique",
-  "slug": "electronique",
-  "created_at": "2026-11-02T10:30:00Z"
 }
 ```
 ```
 
 ---
 
-## Solution — Code Backend (Laravel)
+## Explication des Éléments Utilisés
 
-```markdown
-## Implémentation Backend
-
-### Contrôleur : `app/Http/Controllers/CategoryController.php`
-
-```php
-<?php
-namespace App\Http\Controllers;
-
-use App\Models\Category;
-use Illuminate\Http\Request;
-
-class CategoryController extends Controller
-{
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'slug' => 'required|string|unique:categories'
-        ]);
-
-        $category = Category::create($validated);
-
-        return response()->json($category, 201);
-    }
-}
-```
-
-### Modèle : `app/Models/Category.php`
-
-```php
-<?php
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Category extends Model
-{
-    protected $fillable = ['name', 'slug', 'description'];
-}
-```
-```
+### Slide 1 — Sujet du Projet
+- **Titre H1** : `# Slide 1 — Sujet du Projet`
+- **Gras** : `**plateforme de gestion des restaurants**`
+- **Italique** : `*personnel*`
+- **Barré** : `~~juste une copie~~`
+- **Titre H3** : `### Fonctionnalités principales :`
+- **Liste à puces** : `- Gestion des menus...`
+- **Image** : `![Interface de gestion](./screenshots/dashboard.png)`
+- **Citation** : `> "La gestion de restaurant..."`
+- **Ligne horizontale** : `---`
 
 ---
 
 <!-- _class: light -->
 
-## Solution — Code Frontend (Alpine.js)
+## Explication des Éléments Utilisés (suite)
 
-```markdown
-### Vue : `resources/views/categories/create.blade.php`
-
-```html
-<div x-data="categoryForm()">
-    <form @submit.prevent="submitCategory">
-        <!-- Nom de la catégorie -->
-        <div class="mb-4">
-            <label for="name" class="block text-sm font-medium">
-                Nom de la catégorie
-            </label>
-            <input 
-                type="text" 
-                id="name" 
-                x-model="form.name"
-                @input="generateSlug"
-                class="mt-1 block w-full rounded-md border-gray-300"
-                required
-            >
-        </div>
-
-        <!-- Slug (auto-généré) -->
-        <div class="mb-4">
-            <label for="slug" class="block text-sm font-medium">
-                Slug (URL)
-            </label>
-            <input 
-                type="text" 
-                id="slug" 
-                x-model="form.slug"
-                class="mt-1 block w-full rounded-md border-gray-300"
-                required
-            >
-        </div>
-
-        <!-- Description -->
-        <div class="mb-4">
-            <label for="description" class="block text-sm font-medium">
-                Description
-            </label>
-            <textarea 
-                id="description" 
-                x-model="form.description"
-                rows="3"
-                class="mt-1 block w-full rounded-md border-gray-300"
-            ></textarea>
-        </div>
-
-        <!-- Bouton de soumission -->
-        <button 
-            type="submit"
-            :disabled="loading"
-            class="bg-blue-600 text-white px-4 py-2 rounded-md"
-            x-text="loading ? 'Création...' : 'Créer la catégorie'"
-        ></button>
-
-        <!-- Message de succès -->
-        <div x-show="success" class="mt-4 p-3 bg-green-100 text-green-800 rounded">
-            Catégorie créée avec succès !
-        </div>
-
-        <!-- Message d'erreur -->
-        <div x-show="error" class="mt-4 p-3 bg-red-100 text-red-800 rounded">
-            Erreur : <span x-text="errorMessage"></span>
-        </div>
-    </form>
-</div>
-
-<script>
-function categoryForm() {
-    return {
-        form: {
-            name: '',
-            slug: '',
-            description: ''
-        },
-        loading: false,
-        success: false,
-        error: false,
-        errorMessage: '',
-
-        generateSlug() {
-            this.form.slug = this.form.name
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-')
-                .replace(/(^-|-$)/g, '');
-        },
-
-        async submitCategory() {
-            this.loading = true;
-            this.success = false;
-            this.error = false;
-
-            try {
-                const response = await fetch('/api/categories', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-                    },
-                    body: JSON.stringify(this.form)
-                });
-
-                if (response.ok) {
-                    this.success = true;
-                    this.form = { name: '', slug: '', description: '' };
-                } else {
-                    const data = await response.json();
-                    this.error = true;
-                    this.errorMessage = data.message || 'Erreur inconnue';
-                }
-            } catch (err) {
-                this.error = true;
-                this.errorMessage = 'Erreur de connexion';
-            } finally {
-                this.loading = false;
-            }
-        }
-    }
-}
-</script>
-```
-```
-
----
-
-## Solution — Tests
-
-```markdown
-## Tests
-
-### Test Unitaire : `tests/Feature/CategoryTest.php`
-
-```php
-<?php
-
-namespace Tests\Feature;
-
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-
-class CategoryTest extends TestCase
-{
-    use RefreshDatabase;
-
-    public function test_can_create_category()
-    {
-        $response = $this->postJson('/api/categories', [
-            'name' => 'Électronique',
-            'description' => 'Appareils électroniques',
-            'slug' => 'electronique'
-        ]);
-
-        $response->assertStatus(201)
-                 ->assertJson([
-                     'name' => 'Électronique',
-                     'slug' => 'electronique'
-                 ]);
-
-        $this->assertDatabaseHas('categories', [
-            'slug' => 'electronique'
-        ]);
-    }
-
-    public function test_slug_must_be_unique()
-    {
-        // Créer une première catégorie
-        $this->postJson('/api/categories', [
-            'name' => 'Test',
-            'slug' => 'test'
-        ]);
-
-        // Tenter de créer une deuxième avec le même slug
-        $response = $this->postJson('/api/categories', [
-            'name' => 'Test 2',
-            'slug' => 'test'
-        ]);
-
-        $response->assertStatus(422);
-    }
-}
-```
-
-### Commande de test
-```bash
-php artisan test --filter=CategoryTest
-```
-
-### Résultat attendu
-```
-PASS  Tests\Feature\CategoryTest
-✓ can create category
-✓ slug must be unique
-
-Tests:  2 passed
-Time:   0.15s
-```
-```
-
----
-
-<!-- _class: light -->
-
-## Solution — Captures d'écran
-
-```markdown
-## Captures d'écran
-
-### Formulaire vide
-![Formulaire de création vide](./screenshots/category-form-empty.png)
-
-*Le slug se génère automatiquement lors de la saisie du nom.*
-
-### Validation en temps réel
-![Validation Alpine.js](./screenshots/category-validation.png)
-
-*Alpine.js valide les champs côté client avant soumission.*
-
-### Message de succès
-![Catégorie créée avec succès](./screenshots/category-success.png)
-
-*Confirmation visuelle après création réussie.*
-
-### Liste mise à jour
-![Liste des catégories](./screenshots/categories-list.png)
-
-*La nouvelle catégorie apparaît immédiatement dans la liste.*
-```
-
-**Note :** Créer un dossier `docs/screenshots/` pour organiser les images.
-
----
-
-## Solution — Installation et Déploiement
-
-```markdown
-## Installation
-
-### 1. Cloner le projet
-```bash
-git clone https://github.com/votre-repo/projet.git
-cd projet
-```
-
-### 2. Installer les dépendances
-```bash
-composer install
-npm install
-```
-
-### 3. Configurer la base de données
-```bash
-cp .env.example .env
-php artisan key:generate
-# Configurer DB_DATABASE, DB_USERNAME, DB_PASSWORD dans .env
-php artisan migrate
-```
-
-### 4. Lancer le serveur
-```bash
-php artisan serve
-npm run dev
-```
-
-### 5. Accéder à l'application
-Ouvrir http://localhost:8000/categories/create
-
-## Déploiement
-
-### Étapes de mise en production
-
-```bash
-# 1. Migration de base de données
-php artisan migrate --force
-
-# 2. Optimiser l'application
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-
-# 3. Build des assets frontend
-npm run build
-
-# 4. Vérifier les permissions
-chmod -R 755 storage bootstrap/cache
-```
-
-### Rollback en cas d'erreur
-```bash
-php artisan migrate:rollback --step=1
-php artisan cache:clear
-```
-```
-
----
-
-<!-- _class: light -->
-
-## Récapitulatif : Syntaxe Markdown Utilisée
-
-| Élément | Syntaxe | Usage dans le Lab |
-|:--------|:-------:|:------------------|
-| Titres | `# ## ###` | Structurer les sections |
-| Gras | `**texte**` | Mettre en avant les termes clés |
-| Italique | `*texte*` | Notes et précisions |
-| Code inline | `` `code` `` | Noms de fichiers et commandes courtes |
-| Bloc de code | ` ```php ` | Code source complet avec coloration |
-| Tableaux | `\| --- \|` | Architecture, endpoints, syntaxe |
-| Listes | `- Item` | Énumérer les étapes et prérequis |
-| Images | `![alt](url)` | Captures d'écran |
-| Liens | `[nom](url)` | Références externes |
+### Slide 2 — Objectif du Projet
+- **Titre H1** : `# Slide 2 — Objectif du Projet`
+- **Lien** : `[Guide Markdown](https://www.markdownguide.org/)`
+- **Titre H3** : `### Étapes du projet :`
+- **Liste numérotée** : `1. Développer le module...`
+- **Liste de tâches** : `- [x] Module de gestion...`
+- **Tableau** : Structure avec `|` et alignement `:---`
+- **Code inline** : `` `composer.json` ``
+- **Bloc de code** : ` ```json ` avec coloration syntaxique
 
 ---
 
 ## Template Réutilisable
 
-**Fichier :** `docs/TEMPLATE-FEATURE.md`
-
 ```markdown
-# Fonctionnalité : [NOM]
+# Slide 1 — Sujet du Projet
 
-## Description
-[Décrire brièvement la fonctionnalité]
+Mon projet est une **[description du projet]** où [public cible] 
+peuvent [action principale]. C'est *personnel* — pas ~~juste une copie~~ 
+des solutions existantes.
 
-## Prérequis
-- [Outil 1]
-- [Outil 2]
+### Fonctionnalités principales :
+- [Fonctionnalité 1]
+- [Fonctionnalité 2]
+- [Fonctionnalité 3]
 
-## Stack Utilisée
-- **Backend** : [Framework]
-- **Frontend** : [Framework]
-- **Base de données** : [BDD]
+![Description image](./chemin/vers/image.png)
 
-## Architecture
+> "[Citation pertinente sur le projet]"
 
-| Composant | Fichier | Responsabilité |
-|:----------|:--------|:---------------|
-| Route | `routes/xxx.php` | [Rôle] |
-| Contrôleur | `XxxController.php` | [Rôle] |
+---
 
-## Endpoints API
+# Slide 2 — Objectif du Projet
 
-### GET /api/xxx
-[Description]
+L'objectif est de [objectif principal], tout en apprenant Markdown 
+avec cette présentation. Voir le [Guide Markdown](https://www.markdownguide.org/).
 
-**Réponse (200 OK) :**
+### Étapes du projet :
+1. [Étape 1]
+2. [Étape 2]
+3. [Étape 3]
+
+### Progression actuelle :
+- [x] [Tâche terminée]
+- [ ] [Tâche en cours]
+
+| Fonctionnalité | Technologies |
+|:---------------|:-------------|
+| [Composant 1] | [Tech 1] |
+| [Composant 2] | [Tech 2] |
+
+### Stack technique :
+Configuration : `fichier.json`
+
 ```json
 {
-  "data": []
+  "config": "valeur"
 }
-```
-
-## Implémentation Backend
-
-### Contrôleur
-```php
-// Code ici
-```
-
-## Implémentation Frontend
-
-### Vue
-```html
-<!-- Code ici -->
-```
-
-## Tests
-
-### Test Unitaire
-```php
-// Test ici
-```
-
-## Captures d'écran
-
-![Description](./screenshots/xxx.png)
-
-## Installation
-
-```bash
-# Commandes
-```
-
-## Déploiement
-
-```bash
-# Étapes
 ```
 ```
 
@@ -764,34 +399,79 @@ php artisan cache:clear
 
 <!-- _class: light -->
 
-## Bonnes Pratiques de Documentation
+## Récapitulatif : Tous les Éléments Markdown
 
-### Structure professionnelle
+| Élément | Syntaxe | Présent dans |
+|:--------|:--------|:-------------|
+| Titre H1 | `# Titre` | Slide 1 & 2 |
+| Titre H3 | `### Titre` | Slide 1 & 2 |
+| Gras | `**texte**` | Slide 1 |
+| Italique | `*texte*` | Slide 1 |
+| Barré | `~~texte~~` | Slide 1 |
+| Liste à puces | `- Item` | Slide 1 |
+| Liste numérotée | `1. Item` | Slide 2 |
+| Liste de tâches | `- [x] Item` | Slide 2 |
+| Lien | `[texte](url)` | Slide 2 |
+| Image | `![alt](url)` | Slide 1 |
+| Tableau | `\| --- \|` | Slide 2 |
+| Code inline | `` `code` `` | Slide 2 |
+| Bloc de code | ` ```json ` | Slide 2 |
+| Citation | `> texte` | Slide 1 |
+| Ligne horizontale | `---` | Entre slides |
 
-1. **Toujours commencer par un titre H1** : `# Nom de la fonctionnalité`
-2. **Suivre une structure logique** : Description → Architecture → Code → Tests → Déploiement
-3. **Utiliser des tableaux** pour les données structurées (composants, endpoints)
-4. **Spécifier le langage** dans les blocs de code : ` ```php `, ` ```bash `, ` ```json `
-5. **Inclure des exemples concrets** : Requêtes/réponses complètes
-6. **Ajouter des captures d'écran** pour les interfaces utilisateur
-7. **Documenter les tests** : Montrer comment vérifier que ça fonctionne
-8. **Fournir les commandes d'installation** : Permettre à un développeur de reproduire
+---
+
+## Conseils de Rédaction
+
+### Structure claire
+1. **Slide 1 (Sujet)** : Présenter le contexte et les fonctionnalités principales
+2. **Slide 2 (Objectif)** : Détailler les objectifs et la progression
+
+### Répartition des éléments
+- **Slide 1** : Éléments visuels (image, citation, listes à puces)
+- **Slide 2** : Éléments techniques (tableaux, code, listes de tâches)
+
+### Cohérence
+- Utiliser un **style personnel** : "Mon projet est..."
+- Rester **concis** : 2-3 paragraphes par slide maximum
+- Alterner les éléments pour **maintenir l'intérêt visuel**
+
+---
+
+<!-- _class: light -->
+
+## Prévisualisation et Validation
+
+### Prévisualiser dans VS Code
+1. Ouvrir le fichier `.md`
+2. Appuyer sur `Ctrl+Shift+V` (Windows/Linux) ou `Cmd+Shift+V` (macOS)
+3. Vérifier le rendu de chaque élément
+
+### Points de contrôle
+✅ Les titres sont bien hiérarchisés (H1 → H3)  
+✅ Le texte en gras/italique/barré s'affiche correctement  
+✅ Les listes sont bien formatées  
+✅ Les liens sont cliquables  
+✅ L'image s'affiche (ou le chemin est correct)  
+✅ Le tableau est aligné  
+✅ Le code JSON a la coloration syntaxique  
+✅ La citation est visuellement distincte  
+✅ La ligne horizontale sépare bien les slides
 
 ---
 
 ## Ressources Complémentaires
 
-### Documentation officielle
-- **Markdown** : [markdownguide.org](https://www.markdownguide.org)
+### Documentation Markdown
+- **Guide officiel** : [markdownguide.org](https://www.markdownguide.org/)
 - **GitHub Flavored Markdown** : [github.com/gfm](https://github.github.com/gfm/)
-- **Laravel Docs** : [laravel.com/docs](https://laravel.com/docs)
-- **Alpine.js** : [alpinejs.dev](https://alpinejs.dev)
+- **Tutoriel interactif** : [markdowntutorial.com](https://www.markdowntutorial.com/)
 
-### Outils recommandés
-- **VS Code** : Extensions "Markdown All in One" et "markdownlint"
-- **Typora** : Éditeur WYSIWYG pour Markdown
+### Éditeurs Recommandés
+- **VS Code** : Avec extension "Markdown All in One"
+- **Typora** : Éditeur WYSIWYG
 - **Dillinger** : Éditeur en ligne [dillinger.io](https://dillinger.io/)
 
-### Exemples de documentation professionnelle
-- **Laravel** : [github.com/laravel/laravel](https://github.com/laravel/laravel)
-- **Tailwind CSS** : [github.com/tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss)
+### Exemples Réels
+- [Laravel README](https://github.com/laravel/laravel/blob/master/README.md)
+- [Alpine.js Docs](https://github.com/alpinejs/alpine)
