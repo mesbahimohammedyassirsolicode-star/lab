@@ -1,0 +1,15 @@
+{
+  "description": "Injects the always-on rules of the fullstack-agent plugin at session start",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '# Fullstack Agent: always-on rules'; cat \"${CLAUDE_PLUGIN_ROOT}\"/rules/*.md"
+          }
+        ]
+      }
+    ]
+  }
+}

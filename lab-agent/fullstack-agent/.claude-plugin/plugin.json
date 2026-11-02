@@ -1,0 +1,7 @@
+{
+  "name": "fullstack-agent",
+  "version": "1.0.0",
+  "description": "Full-stack architect agent: contract-first and UI-first workflow for HTML + Tailwind + Alpine.js, Laravel API, Kotlin Android and native PHP libraries, with mandatory GO checkpoints.",
+  "author": { "name": "Mym" },
+  "keywords": ["fullstack", "laravel", "tailwind", "alpine", "kotlin", "workflow"]
+}

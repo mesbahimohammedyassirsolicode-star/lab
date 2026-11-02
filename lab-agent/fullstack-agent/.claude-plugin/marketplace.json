@@ -1,0 +1,12 @@
+{
+  "name": "mym-plugins",
+  "owner": { "name": "Mym" },
+  "plugins": [
+    {
+      "name": "fullstack-agent",
+      "source": "./",
+      "description": "Full-stack architect agent with a 9-phase GO-checkpoint workflow.",
+      "version": "1.0.0"
+    }
+  ]
+}
