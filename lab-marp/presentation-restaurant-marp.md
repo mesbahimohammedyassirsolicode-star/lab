@@ -180,7 +180,7 @@ style: |
 <br/>
 
 **Apprenant :** Mohammed Yassir MESBAHI
-**Encadrant :** ES-Sarraj Fouad
+**Encadrant :** ES-SARRAJ Fouad
 
 📅 Novembre 2026 | 🏢 OFPPT Solicode
 
@@ -505,7 +505,7 @@ Mohammed Yassir MESBAHI
 📧 mesbahi@solicode.ma
 
 **Encadrant**
-ES-Sarraj Fouad
+ES-SARRAJ Fouad
 📧 Solicode - Formation Développement Digital
 
 <br/>

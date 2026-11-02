@@ -24,7 +24,7 @@ Créer une première impression professionnelle et identifier clairement le cont
 ```
 Lab : Gestion des Restaurants avec Laravel
 Présenté par : Mohammed Yassir MESBAHI
-Encadrant : [Nom de l'encadrant]
+Encadrant : ES-SARRAJ Fouad
 Date : 02 Novembre 2026
 ```
 

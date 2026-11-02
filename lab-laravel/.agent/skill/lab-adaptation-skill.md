@@ -39,7 +39,7 @@ Every lab presentation **must be in Marp format** (`marp: true`) and follow this
 - **Content:**
   - The **name of the lab** as the main title
   - **Student name:** Mohammed Yassir Mesbahi
-  - **Encadrant:** Fouad Es-sarraj
+  - **Encadrant:** ES-SARRAJ Fouad
 - **Rule:** Always include both the student and encadrant names on the title slide.
 
 ### Slide 2: Plan de Présentation
@@ -122,7 +122,7 @@ Every lab presentation **must be in Marp format** (`marp: true`) and follow this
 
 ## Operational Guidelines
 
-- **Student & Encadrant Names:** Always include on the title slide: Mohammed Yassir Mesbahi (étudiant) and Fouad Essarraj (encadrant).
+- **Student & Encadrant Names:** Always include on the title slide: Mohammed Yassir Mesbahi (étudiant) and ES-SARRAJ Fouad (encadrant).
 - **Consultation Préalable Obligatoire:** Toujours demander à l'utilisateur son problème et sa solution avant de rédiger les slides correspondantes. Ne jamais les inventer.
 - **Single Deliverable File:** Keep all documentation and examples inside the designated lab file (e.g. `lab-<topic>.md`).
 - **No Git Inquiries:** Do not run git commands if the user specifies not to use git.
