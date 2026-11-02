@@ -7,7 +7,7 @@ paginate: true
 # Lab : Gestion des Restaurants avec Laravel
 
 **Présenté par :** Mohammed Yassir MESBAHI  
-**Encadrant :** ES-SSARAJ FOUAD  
+**Encadrant :** ES-SARRAJ Fouad. 
 **Date :** 02 Novembre 2026
 
 ---
