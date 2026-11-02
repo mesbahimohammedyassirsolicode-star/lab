@@ -39,7 +39,7 @@ Every lab presentation **must be in Marp format** (`marp: true`) and follow this
 - **Content:**
   - The **name of the lab** as the main title
   - **Student name:** Mohammed Yassir Mesbahi
-  - **Encadrant:** Fouad Essarraj
+  - **Encadrant:** Fouad Es-sarraj
 - **Rule:** Always include both the student and encadrant names on the title slide.
 
 ### Slide 2: Plan de Présentation

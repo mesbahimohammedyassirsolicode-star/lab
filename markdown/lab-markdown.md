@@ -138,138 +138,660 @@ style: |
 
 <!-- _class: title -->
 
-# Découvrir la syntaxe Markdown
+# Lab Markdown
+
+**Étudiant :** Mohammed Yassir Mesbahi  
+**Encadrant :** Fouad Es-sarraj
 
 ---
 
 <!-- _class: light -->
 
-## Lab Plan
+## Plan de Présentation
 
-1. Introduction
-2. Problems Encountered
-3. Solutions Implemented
-
----
-
-## Introduction
-
-### Objectif et portée du Lab
-
-- **Découvrir la syntaxe Markdown** pour structurer et mettre en forme efficacement un document.
-- **Éléments abordés et pratiqués** :
-  - Hiérarchie des titres (`#` à `######`) et gestion des paragraphes
-  - Styles de texte (**gras**, *italique*, ~~barré~~, citations `>`)
-  - Listes non ordonnées (à puces), ordonnées (numérotées) et tâches (`- [x]`)
-  - Liens hypertextes (`[texte](url)`) et intégration d'images (`![alt](url)`)
-  - Tableaux structurés avec alignements (`:---`, `:---:`, `---:`)
-  - Blocs de code avec coloration syntaxique (`html`, `javascript`, `php`)
+1. Introduction & Stack Technique
+2. Définitions
+3. Problème
+4. Solution
 
 ---
 
-## Problems Encountered
+## Stack Technique
 
-### Obstacles rencontrés lors de la mise en forme
+**Stack de Développement Web Full-Stack**
 
-- **Retours à la ligne ignorés** : Un retour à la ligne simple dans l'éditeur ne crée pas de nouveau paragraphe sans ligne vide ou double espace.
-- **Rupture d'affichage des tableaux** : Tableaux non interprétés en cas d'oubli de la ligne séparatrice obligatoire de tirets (`| --- |`).
-- **Coloration syntaxique absente** : Blocs de code affichés en texte brut sans le nom du langage spécifié après les triples backticks.
-- **Problèmes de liens et images** : Liens cassés ou images non affichées causés par des erreurs dans la syntaxe ou des chemins relatifs erronés.
+- **Laravel** : Framework PHP backend pour API REST et logique métier
+- **Alpine.js** : Framework JavaScript léger pour l'interactivité frontend
+- **Tailwind CSS & Preline UI** : Framework CSS utilitaire et bibliothèque de composants
+- **MySQL** : Base de données relationnelle pour stocker les catégories
+- **Composer** : Gestionnaire de dépendances PHP
 
 ---
 
 <!-- _class: light -->
 
-## Solutions Implemented
+## Définitions
 
-### 01 — Gestion des paragraphes & sauts de ligne
-Séparer les paragraphes par une ligne vide ou terminer une ligne par deux espaces pour forcer un saut `<br>`.
+### Markdown
+Langage de balisage léger créé en 2004, utilisant une syntaxe simple (`#`, `**`, `-`) pour formater du texte. Converti en HTML, il est utilisé pour README, documentation technique et blogs.
 
-### 02 — Structuration des tableaux & alignements
-Insérer la ligne de séparation avec les deux-points pour définir l'alignement (`:---` à gauche, `:---:` centré, `---:` à droite).
-
-### 03 — Blocs de code typés
-Délimiter le code par trois backticks en déclarant le langage cible (ex: ```` ```javascript ```` ou ```` ```php ````).
-
-### 04 — Normalisation des liens et images
-Appliquer la syntaxe stricte `[Intitulé](URL)` pour les liens et `![Description](URL)` pour les images avec texte alternatif.
+### Balisage (Markup)
+Système de notation qui structure le contenu avec des symboles spéciaux. Contrairement au HTML (`<h1>Titre</h1>`), Markdown simplifie avec `# Titre`.
 
 ---
 
-## Exemples Pratiques : Titres & Formatage
+## Définitions (suite)
+
+### Syntaxe
+Ensemble de règles qui définissent comment écrire correctement dans un langage. En Markdown : `**gras**` pour **gras**, `*italique*` pour *italique*.
+
+### Rendu (Rendering)
+Processus de transformation du code source (Markdown) en format visuel final (HTML/PDF). Le rendu interprète `# Titre` et l'affiche comme un grand titre.
+
+---
+
+<!-- _class: light -->
+
+## Problème
+
+**Nous voulons créer de la documentation en Markdown mais nous ne savons pas comment faire.**
+
+### Conséquences sans maîtrise du Markdown :
+
+- **Documentation inexistante ou mal structurée** : Difficulté à expliquer les fonctionnalités aux autres développeurs
+- **Perte de temps** : Utilisation d'outils lourds (Word, Google Docs) inadaptés au code
+- **Manque de professionnalisme** : Projets GitHub sans README clair
+- **Collaboration difficile** : Impossibilité de versionner efficacement la documentation
+
+---
+
+## Solution
+
+**Pratiquer la création de documentation Markdown à travers un cas pratique concret**
+
+### Cas pratique : Documenter la fonctionnalité "Ajout de Catégorie"
+
+Nous allons créer une documentation complète et professionnelle pour une fonctionnalité réelle d'une application Laravel + Alpine.js.
+
+**Livrable :** Fichier `docs/feature-add-category.md`
+
+---
+
+<!-- _class: light -->
+
+## Solution — Structure de la Documentation
 
 ```markdown
-# Titre Principal (H1)
-## Sous-titre (H2)
-### Section détaillée (H3)
+# Fonctionnalité : Ajout de Catégorie
 
-Texte normal avec du **texte en gras**, du *texte en italique*,
-du ~~texte barré~~ ou du ***gras et italique***.
+## Description
+Permet aux administrateurs d'ajouter une nouvelle catégorie 
+de produits dans le système via un formulaire interactif.
 
-> Une citation en bloc pour mettre en avant une remarque clé.
+## Prérequis
+- Laravel 10+ installé
+- MySQL configuré
+- Alpine.js chargé via CDN
+- Droits d'administration
+
+## Stack Utilisée
+- **Backend** : Laravel (API REST)
+- **Frontend** : Alpine.js + Tailwind CSS
+- **Base de données** : MySQL
 ```
 
-- `#` définit les niveaux de hiérarchie.
-- `**` applique le gras, `*` applique l'italique.
-- `>` crée un bloc de citation.
+---
+
+## Solution — Architecture des Composants
+
+```markdown
+## Architecture
+
+| Composant | Fichier | Responsabilité |
+|:----------|:--------|:---------------|
+| Route | `routes/web.php` | Définit `/categories/create` |
+| Contrôleur | `CategoryController.php` | Logique métier & validation |
+| Modèle | `Category.php` | Représente la table `categories` |
+| Vue | `categories/create.blade.php` | Formulaire Alpine.js |
+| Migration | `xxxx_create_categories_table.php` | Schéma BDD |
+
+## Schéma de Base de Données
+
+```sql
+CREATE TABLE categories (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    slug VARCHAR(255) UNIQUE NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+);
+```
+```
 
 ---
 
 <!-- _class: light -->
 
-## Exemples Pratiques : Listes & Liens
+## Solution — Endpoints API
 
 ```markdown
-### Liste à puces :
-- Frontend : HTML, CSS, JavaScript
-- Backend : PHP, Laravel
-- Outils : Git, GitHub
+## Endpoints API
 
-### Liste numérotée :
-1. Découvrir la syntaxe Markdown
-2. Réaliser les exemples pratiques
-3. Publier sur GitHub
+### GET /api/categories
+Récupère la liste des catégories.
 
-Lien vers la documentation : [Guide Markdown](https://www.markdownguide.org)
+**Réponse (200 OK) :**
+```json
+[
+  {
+    "id": 1,
+    "name": "Électronique",
+    "slug": "electronique",
+    "description": "Appareils électroniques"
+  }
+]
 ```
 
----
+### POST /api/categories
+Crée une nouvelle catégorie.
 
-## Exemples Pratiques : Tableaux & Images
-
-```markdown
-![Logo Markdown](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
-```
-
-| Élément | Syntaxe Markdown | Rendu |
-| :--- | :---: | ---: |
-| Titre | `# Titre` | Titre H1 |
-| Gras | `**mot**` | **mot** |
-| Italique | `*mot*` | *mot* |
-| Code en ligne | `` `git commit` `` | Code inline |
-| Lien | `[nom](url)` | Lien cliquable |
-
----
-
-<!-- _class: light -->
-
-## Exemples Pratiques : Blocs de Code
-
-```javascript
-// Coloration syntaxique JavaScript
-function validerLab(titre) {
-  console.log(`Validation du lab : ${titre}`);
-  return true;
+**Requête :**
+```json
+{
+  "name": "Électronique",
+  "description": "Appareils électroniques",
+  "slug": "electronique"
 }
-validerLab("Syntaxe Markdown");
 ```
+
+**Réponse (201 Created) :**
+```json
+{
+  "id": 5,
+  "name": "Électronique",
+  "slug": "electronique",
+  "created_at": "2026-11-02T10:30:00Z"
+}
+```
+```
+
+---
+
+## Solution — Code Backend (Laravel)
+
+```markdown
+## Implémentation Backend
+
+### Contrôleur : `app/Http/Controllers/CategoryController.php`
 
 ```php
 <?php
-// Coloration syntaxique PHP
-$competences = ["Titres", "Listes", "Liens", "Images", "Tableaux", "Code"];
-foreach ($competences as $competence) {
-    echo "Compétence validée : " . $competence . "\n";
+namespace App\Http\Controllers;
+
+use App\Models\Category;
+use Illuminate\Http\Request;
+
+class CategoryController extends Controller
+{
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'slug' => 'required|string|unique:categories'
+        ]);
+
+        $category = Category::create($validated);
+
+        return response()->json($category, 201);
+    }
 }
-?>
 ```
+
+### Modèle : `app/Models/Category.php`
+
+```php
+<?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Category extends Model
+{
+    protected $fillable = ['name', 'slug', 'description'];
+}
+```
+```
+
+---
+
+<!-- _class: light -->
+
+## Solution — Code Frontend (Alpine.js)
+
+```markdown
+### Vue : `resources/views/categories/create.blade.php`
+
+```html
+<div x-data="categoryForm()">
+    <form @submit.prevent="submitCategory">
+        <!-- Nom de la catégorie -->
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium">
+                Nom de la catégorie
+            </label>
+            <input 
+                type="text" 
+                id="name" 
+                x-model="form.name"
+                @input="generateSlug"
+                class="mt-1 block w-full rounded-md border-gray-300"
+                required
+            >
+        </div>
+
+        <!-- Slug (auto-généré) -->
+        <div class="mb-4">
+            <label for="slug" class="block text-sm font-medium">
+                Slug (URL)
+            </label>
+            <input 
+                type="text" 
+                id="slug" 
+                x-model="form.slug"
+                class="mt-1 block w-full rounded-md border-gray-300"
+                required
+            >
+        </div>
+
+        <!-- Description -->
+        <div class="mb-4">
+            <label for="description" class="block text-sm font-medium">
+                Description
+            </label>
+            <textarea 
+                id="description" 
+                x-model="form.description"
+                rows="3"
+                class="mt-1 block w-full rounded-md border-gray-300"
+            ></textarea>
+        </div>
+
+        <!-- Bouton de soumission -->
+        <button 
+            type="submit"
+            :disabled="loading"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md"
+            x-text="loading ? 'Création...' : 'Créer la catégorie'"
+        ></button>
+
+        <!-- Message de succès -->
+        <div x-show="success" class="mt-4 p-3 bg-green-100 text-green-800 rounded">
+            Catégorie créée avec succès !
+        </div>
+
+        <!-- Message d'erreur -->
+        <div x-show="error" class="mt-4 p-3 bg-red-100 text-red-800 rounded">
+            Erreur : <span x-text="errorMessage"></span>
+        </div>
+    </form>
+</div>
+
+<script>
+function categoryForm() {
+    return {
+        form: {
+            name: '',
+            slug: '',
+            description: ''
+        },
+        loading: false,
+        success: false,
+        error: false,
+        errorMessage: '',
+
+        generateSlug() {
+            this.form.slug = this.form.name
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)/g, '');
+        },
+
+        async submitCategory() {
+            this.loading = true;
+            this.success = false;
+            this.error = false;
+
+            try {
+                const response = await fetch('/api/categories', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify(this.form)
+                });
+
+                if (response.ok) {
+                    this.success = true;
+                    this.form = { name: '', slug: '', description: '' };
+                } else {
+                    const data = await response.json();
+                    this.error = true;
+                    this.errorMessage = data.message || 'Erreur inconnue';
+                }
+            } catch (err) {
+                this.error = true;
+                this.errorMessage = 'Erreur de connexion';
+            } finally {
+                this.loading = false;
+            }
+        }
+    }
+}
+</script>
+```
+```
+
+---
+
+## Solution — Tests
+
+```markdown
+## Tests
+
+### Test Unitaire : `tests/Feature/CategoryTest.php`
+
+```php
+<?php
+
+namespace Tests\Feature;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class CategoryTest extends TestCase
+{
+    use RefreshDatabase;
+
+    public function test_can_create_category()
+    {
+        $response = $this->postJson('/api/categories', [
+            'name' => 'Électronique',
+            'description' => 'Appareils électroniques',
+            'slug' => 'electronique'
+        ]);
+
+        $response->assertStatus(201)
+                 ->assertJson([
+                     'name' => 'Électronique',
+                     'slug' => 'electronique'
+                 ]);
+
+        $this->assertDatabaseHas('categories', [
+            'slug' => 'electronique'
+        ]);
+    }
+
+    public function test_slug_must_be_unique()
+    {
+        // Créer une première catégorie
+        $this->postJson('/api/categories', [
+            'name' => 'Test',
+            'slug' => 'test'
+        ]);
+
+        // Tenter de créer une deuxième avec le même slug
+        $response = $this->postJson('/api/categories', [
+            'name' => 'Test 2',
+            'slug' => 'test'
+        ]);
+
+        $response->assertStatus(422);
+    }
+}
+```
+
+### Commande de test
+```bash
+php artisan test --filter=CategoryTest
+```
+
+### Résultat attendu
+```
+PASS  Tests\Feature\CategoryTest
+✓ can create category
+✓ slug must be unique
+
+Tests:  2 passed
+Time:   0.15s
+```
+```
+
+---
+
+<!-- _class: light -->
+
+## Solution — Captures d'écran
+
+```markdown
+## Captures d'écran
+
+### Formulaire vide
+![Formulaire de création vide](./screenshots/category-form-empty.png)
+
+*Le slug se génère automatiquement lors de la saisie du nom.*
+
+### Validation en temps réel
+![Validation Alpine.js](./screenshots/category-validation.png)
+
+*Alpine.js valide les champs côté client avant soumission.*
+
+### Message de succès
+![Catégorie créée avec succès](./screenshots/category-success.png)
+
+*Confirmation visuelle après création réussie.*
+
+### Liste mise à jour
+![Liste des catégories](./screenshots/categories-list.png)
+
+*La nouvelle catégorie apparaît immédiatement dans la liste.*
+```
+
+**Note :** Créer un dossier `docs/screenshots/` pour organiser les images.
+
+---
+
+## Solution — Installation et Déploiement
+
+```markdown
+## Installation
+
+### 1. Cloner le projet
+```bash
+git clone https://github.com/votre-repo/projet.git
+cd projet
+```
+
+### 2. Installer les dépendances
+```bash
+composer install
+npm install
+```
+
+### 3. Configurer la base de données
+```bash
+cp .env.example .env
+php artisan key:generate
+# Configurer DB_DATABASE, DB_USERNAME, DB_PASSWORD dans .env
+php artisan migrate
+```
+
+### 4. Lancer le serveur
+```bash
+php artisan serve
+npm run dev
+```
+
+### 5. Accéder à l'application
+Ouvrir http://localhost:8000/categories/create
+
+## Déploiement
+
+### Étapes de mise en production
+
+```bash
+# 1. Migration de base de données
+php artisan migrate --force
+
+# 2. Optimiser l'application
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+# 3. Build des assets frontend
+npm run build
+
+# 4. Vérifier les permissions
+chmod -R 755 storage bootstrap/cache
+```
+
+### Rollback en cas d'erreur
+```bash
+php artisan migrate:rollback --step=1
+php artisan cache:clear
+```
+```
+
+---
+
+<!-- _class: light -->
+
+## Récapitulatif : Syntaxe Markdown Utilisée
+
+| Élément | Syntaxe | Usage dans le Lab |
+|:--------|:-------:|:------------------|
+| Titres | `# ## ###` | Structurer les sections |
+| Gras | `**texte**` | Mettre en avant les termes clés |
+| Italique | `*texte*` | Notes et précisions |
+| Code inline | `` `code` `` | Noms de fichiers et commandes courtes |
+| Bloc de code | ` ```php ` | Code source complet avec coloration |
+| Tableaux | `\| --- \|` | Architecture, endpoints, syntaxe |
+| Listes | `- Item` | Énumérer les étapes et prérequis |
+| Images | `![alt](url)` | Captures d'écran |
+| Liens | `[nom](url)` | Références externes |
+
+---
+
+## Template Réutilisable
+
+**Fichier :** `docs/TEMPLATE-FEATURE.md`
+
+```markdown
+# Fonctionnalité : [NOM]
+
+## Description
+[Décrire brièvement la fonctionnalité]
+
+## Prérequis
+- [Outil 1]
+- [Outil 2]
+
+## Stack Utilisée
+- **Backend** : [Framework]
+- **Frontend** : [Framework]
+- **Base de données** : [BDD]
+
+## Architecture
+
+| Composant | Fichier | Responsabilité |
+|:----------|:--------|:---------------|
+| Route | `routes/xxx.php` | [Rôle] |
+| Contrôleur | `XxxController.php` | [Rôle] |
+
+## Endpoints API
+
+### GET /api/xxx
+[Description]
+
+**Réponse (200 OK) :**
+```json
+{
+  "data": []
+}
+```
+
+## Implémentation Backend
+
+### Contrôleur
+```php
+// Code ici
+```
+
+## Implémentation Frontend
+
+### Vue
+```html
+<!-- Code ici -->
+```
+
+## Tests
+
+### Test Unitaire
+```php
+// Test ici
+```
+
+## Captures d'écran
+
+![Description](./screenshots/xxx.png)
+
+## Installation
+
+```bash
+# Commandes
+```
+
+## Déploiement
+
+```bash
+# Étapes
+```
+```
+
+---
+
+<!-- _class: light -->
+
+## Bonnes Pratiques de Documentation
+
+### Structure professionnelle
+
+1. **Toujours commencer par un titre H1** : `# Nom de la fonctionnalité`
+2. **Suivre une structure logique** : Description → Architecture → Code → Tests → Déploiement
+3. **Utiliser des tableaux** pour les données structurées (composants, endpoints)
+4. **Spécifier le langage** dans les blocs de code : ` ```php `, ` ```bash `, ` ```json `
+5. **Inclure des exemples concrets** : Requêtes/réponses complètes
+6. **Ajouter des captures d'écran** pour les interfaces utilisateur
+7. **Documenter les tests** : Montrer comment vérifier que ça fonctionne
+8. **Fournir les commandes d'installation** : Permettre à un développeur de reproduire
+
+---
+
+## Ressources Complémentaires
+
+### Documentation officielle
+- **Markdown** : [markdownguide.org](https://www.markdownguide.org)
+- **GitHub Flavored Markdown** : [github.com/gfm](https://github.github.com/gfm/)
+- **Laravel Docs** : [laravel.com/docs](https://laravel.com/docs)
+- **Alpine.js** : [alpinejs.dev](https://alpinejs.dev)
+
+### Outils recommandés
+- **VS Code** : Extensions "Markdown All in One" et "markdownlint"
+- **Typora** : Éditeur WYSIWYG pour Markdown
+- **Dillinger** : Éditeur en ligne [dillinger.io](https://dillinger.io/)
+
+### Exemples de documentation professionnelle
+- **Laravel** : [github.com/laravel/laravel](https://github.com/laravel/laravel)
+- **Tailwind CSS** : [github.com/tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss)
