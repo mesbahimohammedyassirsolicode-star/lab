@@ -141,7 +141,7 @@ style: |
 
 <div class="by">
   <strong>Mohammed Yassir Mesbahi</strong>
-  Encadrant : Fouad Essarraj
+  Encadrant : ES-SARRAJ Fouad
 </div>
 
 ---
