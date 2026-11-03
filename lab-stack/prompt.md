@@ -38,23 +38,26 @@ Permettre aux apprenants de :
 - Support des diagrammes avec Mermaid
 
 ### Stack technique présentée
-#### Frontend
-- React.js (v18+) : Framework UI moderne et populaire
-- TypeScript : Typage pour réduire les erreurs
-- Tailwind CSS : Rapidité de développement
-- Vite : Performance de build
+#### Langages
+- PHP : Développement côté serveur, en natif et avec Laravel
+- Kotlin : Langage moderne pour Android et le backend
+- JavaScript : Langage pour le développement web
 
-#### Backend
-- Node.js : JavaScript full-stack
-- Express.js : Framework éprouvé et flexible
-- PostgreSQL : SGBD relationnel robuste
-- Prisma : ORM moderne avec typage automatique
+#### Frameworks, UI et outils
+- Laravel : Framework PHP
+- Alpine.js : Framework JavaScript léger et réactif
+- Tailwind CSS : Framework CSS utility-first
+- Preline UI : Composants d'interface basés sur Tailwind CSS
+- VS Code : Éditeur de code
+- Git et GitHub : Gestion de versions et collaboration
+- Antigravity : Environnement de développement assisté par IA
 
 ### Organisation des Labs
-10 Labs organisés en 3 phases :
-1. **Fondations** (Labs 1-3) : Setup et bases
-2. **Développement** (Labs 4-7) : Fonctionnalités principales
-3. **Qualité & Déploiement** (Labs 8-10) : Tests et mise en production
+30 Labs organisés en 4 phases :
+1. **Fondations & Outils** (Labs 1-10) : Concepts, outils et interface
+2. **Méthodologies & Collaboration** (Labs 11-16) : Méthodes et travail d'équipe
+3. **Développement & Langages** (Labs 17-24) : Programmation et langages
+4. **Projet & Production** (Labs 25-30) : Planification et mise en pratique
 
 ## Méthodologie appliquée
 
@@ -70,12 +73,10 @@ Permettre aux apprenants de :
 - Critères de validation clairs
 
 ### Lien avec le projet technique
-Chaque Lab correspond à une brique fonctionnelle du projet final de gestion de restaurants :
-- Lab React → Interface utilisateur
-- Lab API → Services backend
-- Lab BDD → Persistance des données
-- Lab Auth → Sécurité
-- etc.
+Chaque Lab permet de découvrir un langage ou un outil utilisé dans le parcours :
+- Lab PHP natif et Kotlin → Pratique des langages
+- Lab Preline UI → Composants d'interface
+- Lab VS Code, Git/GitHub et Antigravity → Environnement et collaboration
 
 ## Livrables du Lab
 
@@ -113,7 +114,7 @@ Chaque Lab correspond à une brique fonctionnelle du projet final de gestion de 
 
 ## Ressources utilisées
 
-- Documentation officielle React, Node.js, PostgreSQL
+- Documentation officielle PHP, Kotlin, JavaScript et Preline UI
 - Marp documentation pour le format de présentation
 - Best practices de structuration de projet pédagogique
 - Retours d'expérience sur l'apprentissage par la pratique

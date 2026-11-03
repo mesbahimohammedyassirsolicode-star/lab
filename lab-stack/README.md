@@ -43,34 +43,33 @@ Un Lab (laboratoire) est un exercice pratique et ciblé qui permet de :
 
 ### Partie 2 : Découverte de la Stack Technique (30 min)
 
-#### Frontend
+#### Langages
+- **PHP** : Développement côté serveur, en natif et avec Laravel
+- **Kotlin** : Langage moderne pour Android et le backend
+- **JavaScript** : Langage pour le développement web
+
+#### Frameworks, UI et outils
+- **Laravel** : Framework PHP
 - **Alpine.js** : Framework JavaScript léger et réactif
 - **Tailwind CSS** : Framework CSS utility-first
-
-#### Backend
-- **PHP** : Langage serveur
-- **Laravel** : Framework PHP moderne et élégant
-- **MySQL** : Base de données relationnelle
-
-#### DevOps & Outils
-- **Git** : Gestion de version
-- **Docker** : Conteneurisation
-- **GitHub Actions** : CI/CD
-- **ESLint/Prettier** : Qualité de code
+- **Preline UI** : Composants d'interface basés sur Tailwind CSS
+- **VS Code** : Éditeur de code
+- **Git et GitHub** : Gestion de versions et collaboration
+- **Antigravity** : Environnement de développement assisté par IA
 
 ### Partie 3 : Liste des Labs à réaliser (10 min)
 
 #### Phase 1 : Fondations & Outils (Labs 1-10)
 1. **Qu'est-ce qu'un lab ?** - Comprendre les Labs
 2. **Markdown** - Syntaxe et documentation
-3. **GitHub Pages** - Hébergement statique
+3. **Git et GitHub** - Gestion de versions et collaboration
 4. **Antigravity** - Gestion de projets Python
 5. **Marp** - Présentations en Markdown
-6. **OpenCode** - Environnement de développement
+6. **VS Code** - Éditeur de code
 7. **Pandoc** - Conversion de documents
 8. **OmniRoute** - Routage avancé
 9. **Tailwind CSS** - Framework CSS utility-first
-10. **Preline** - Composants UI avec Tailwind
+10. **Preline UI** - Composants UI avec Tailwind
 
 #### Phase 2 : Méthodologies & Collaboration (Labs 11-16)
 11. **2TUP** - Méthodologie de développement
@@ -109,16 +108,18 @@ Un Lab (laboratoire) est un exercice pratique et ciblé qui permet de :
 
 ### Documentation officielle
 
-- [Laravel](https://laravel.com/docs)
-- [Alpine.js](https://alpinejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
 - [PHP](https://www.php.net/)
-- [MySQL](https://www.mysql.com/)
+- [Kotlin](https://kotlinlang.org/docs/)
+- [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
+- [Preline UI](https://preline.co/)
+- [VS Code](https://code.visualstudio.com/docs)
+- [Git](https://git-scm.com/doc)
+- [GitHub](https://docs.github.com/)
 
 ### Tutoriels
 
-- [Laracasts](https://laracasts.com/)
-- [Laravel Bootcamp](https://bootcamp.laravel.com/)
+- [Marp](https://marp.app/)
+- [Antigravity](https://antigravity.google/)
 
 ## ✅ Critères de validation
 

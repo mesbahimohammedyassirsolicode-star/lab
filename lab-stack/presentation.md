@@ -132,14 +132,20 @@ style: |
 
 # 💻 Stack Technique
 
-## Frontend
+## Langages et Framework
+- **PHP** - Développement côté serveur, en natif et avec Laravel
+- **Kotlin** - Langage moderne pour Android et le backend
+- **JavaScript** - Langage pour le développement web
+- - **Laravel** - Framework PHP
 - **Alpine.js** - Framework JavaScript léger et réactif
 - **Tailwind CSS** - Framework CSS utility-first
+- **Preline UI** - Composants d'interface basés sur Tailwind CSS
 
-## Backend
-- **PHP** - Langage serveur
-- **Laravel** - Framework PHP moderne et élégant
-- **MySQL** - Base de données relationnelle
+## UI et outils
+
+- **VS Code** - Éditeur de code
+- **Git et GitHub** - Gestion de versions et collaboration
+- **Antigravity** - Environnement de développement assisté par IA
 
 ---
 
@@ -183,11 +189,11 @@ Un **Lab** (laboratoire) est un **exercice pratique ciblé** qui permet de :
 
 ```
 Projet Global
-    ├─ Lab 1: Alpine.js  → Interface réactive
-    ├─ Lab 2: Tailwind   → Styling
-    ├─ Lab 3: Laravel    → Backend API
-    ├─ Lab 4: MySQL      → Base de données
-    └─ Intégration       → Projet Final
+    ├─ Lab PHP natif     → Développement serveur
+    ├─ Lab Kotlin        → Pratique d'un langage moderne
+    ├─ Lab Preline UI    → Composants d'interface
+    ├─ Lab Git/GitHub    → Versionnement et collaboration
+    └─ Intégration       → Projet final
 ```
 
 ### Méthodologie
@@ -204,14 +210,14 @@ Projet Global
 
 1. **Qu'est-ce qu'un lab ?** - Comprendre les Labs
 2. **Markdown** - Syntaxe et documentation
-3. **GitHub Pages** - Hébergement statique
+3. **Git et GitHub** - Gestion de versions et collaboration
 4. **Antigravity** - Gestion de projets Python
 5. **Marp** - Présentations en Markdown
-6. **OpenCode** - Environnement de développement
+6. **VS Code** - Éditeur de code
 7. **Pandoc** - Conversion de documents
 8. **OmniRoute** - Routage avancé
 9. **Tailwind CSS** - Framework CSS utility-first
-10. **Preline** - Composants UI avec Tailwind
+10. **Preline UI** - Composants UI avec Tailwind
 
 ---
 
