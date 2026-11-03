@@ -3,13 +3,14 @@ marp: true
 theme: default
 paginate: true
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-  
   section {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 60px;
+    padding: 42px 54px;
+    font-size: 24px;
+    line-height: 1.35;
   }
   
   section.title {
@@ -27,27 +28,28 @@ style: |
   }
   
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 700;
-    margin-bottom: 0.5em;
+    line-height: 1.15;
+    margin: 0 0 0.45em;
     color: #fbbf24;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   }
   
   h2 {
-    font-size: 1.8em;
+    font-size: 1.25em;
     font-weight: 600;
     color: #fbbf24;
-    margin-bottom: 0.8em;
-    border-bottom: 3px solid #fbbf24;
-    padding-bottom: 0.3em;
+    margin: 0.3em 0 0.55em;
+    border-bottom: 2px solid #fbbf24;
+    padding-bottom: 0.2em;
   }
   
   h3 {
-    font-size: 1.4em;
+    font-size: 1.05em;
     font-weight: 600;
     color: #fcd34d;
-    margin-top: 1em;
+    margin: 0.55em 0 0.25em;
   }
   
   section.content h2 {
@@ -58,14 +60,20 @@ style: |
   section.content h3 {
     color: #1e3a8a;
   }
+
+  p {
+    margin: 0.4em 0;
+  }
   
   ul, ol {
-    font-size: 1.1em;
-    line-height: 1.8;
+    font-size: 0.92em;
+    line-height: 1.4;
+    margin: 0.35em 0;
+    padding-left: 1.25em;
   }
   
   li {
-    margin: 0.5em 0;
+    margin: 0.18em 0;
   }
   
   strong {
@@ -77,12 +85,11 @@ style: |
   }
   
   blockquote {
-    border-left: 5px solid #fbbf24;
-    padding-left: 20px;
+    border-left: 4px solid #fbbf24;
+    margin: 0.6em 0;
+    padding: 0.5em 0.8em;
     font-style: italic;
-    font-size: 1.2em;
     background: rgba(255,255,255,0.1);
-    padding: 15px 20px;
     border-radius: 8px;
   }
   
@@ -95,10 +102,11 @@ style: |
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    margin: 0.55em 0;
+    font-size: 0.75em;
+    line-height: 1.25;
+    background: white;
+    color: #1e293b;
   }
   
   section.content table {
@@ -107,10 +115,10 @@ style: |
   }
   
   th {
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
+    background: #2563eb;
+    color: white;
+    padding: 8px 10px;
     font-weight: 600;
-    font-size: 1.1em;
   }
   
   section.content th {
@@ -119,8 +127,9 @@ style: |
   }
   
   td {
-    padding: 12px 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 7px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-wrap: anywhere;
   }
   
   section.content td {
@@ -128,10 +137,11 @@ style: |
   }
   
   code {
-    background: rgba(0,0,0,0.3);
-    padding: 2px 8px;
+    background: #e2e8f0;
+    color: #be123c;
+    padding: 1px 5px;
     border-radius: 4px;
-    font-family: 'Fira Code', monospace;
+    font-family: Consolas, 'Courier New', monospace;
   }
   
   section.content code {
@@ -140,29 +150,34 @@ style: |
   }
   
   pre {
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
+    box-sizing: border-box;
+    max-height: 340px;
+    margin: 0.45em 0;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 12px 16px;
     border-radius: 8px;
     overflow-x: auto;
+    overflow-y: auto;
   }
   
-  section.content pre {
-    background: #1e293b;
-  }
-  
-  pre code {
+  pre code, section.content pre code {
     background: transparent;
     color: #e2e8f0;
+    padding: 0;
+    font-size: 0.72em;
+    line-height: 1.25;
   }
-  
-  footer {
-    font-size: 0.8em;
-    color: rgba(255,255,255,0.7);
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
-  
-  header {
-    font-size: 0.9em;
-    font-weight: 600;
+
+  section.title img {
+    max-height: 90px;
+    width: auto;
   }
 ---
 
@@ -184,6 +199,12 @@ style: |
 
 📅 Novembre 2026 | 🏢 OFPPT Solicode
 
+<!--
+Présenter le projet pour les restaurants.
+Dire les sujets : les besoins, les idées et le travail.
+Dire : le but est de mieux gérer le restaurant.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -203,6 +224,12 @@ Une **plateforme de gestion complète** pour les restaurants modernes qui révol
 
 > "Transformer la gestion traditionnelle des restaurants en une solution digitale moderne et efficace"
 
+<!--
+Dire pourquoi ce projet est utile.
+Présenter les quatre buts de la plateforme.
+Dire que l'outil aide le client et l'équipe du restaurant.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -221,6 +248,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 - ❌ **Absence de statistiques** en temps réel
 - 🔄 **Coordination difficile** entre salle et cuisine
 
+<!--
+Expliquer les problèmes du travail sur papier.
+Donner un exemple : une réservation peut être oubliée.
+Dire que ces problèmes rendent le travail plus difficile.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -234,6 +267,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 - ✅ Application de prise de commande digitale
 - ✅ Dashboard avec statistiques en temps réel
 - ✅ Communication instantanée cuisine-salle
+
+<!--
+Dire que la plateforme aide à résoudre ces problèmes.
+Elle aide le gérant, le cuisinier et le client.
+Tout est dans un seul outil.
+-->
 
 ---
 
@@ -250,6 +289,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 - 🧑‍💼 **Serveur** : prise de commandes et service
 - 👥 **Client** : réservations et consultation du menu
 
+<!--
+Présenter les quatre personnes qui utilisent le système.
+Chaque personne a un travail différent.
+Le système donne à chacun les bons outils.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -263,6 +308,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 | **Commandes** | Prise de commande, suivi en temps réel, historique |
 | **Cuisine** | Écran des commandes en cours, mise à jour des statuts |
 | **Statistiques** | Chiffre d'affaires, plats populaires, taux d'occupation |
+
+<!--
+Présenter les grands outils de la plateforme.
+Une réservation peut devenir une commande, puis un plat.
+Les chiffres aident le gérant à suivre le restaurant.
+-->
 
 ---
 
@@ -284,6 +335,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 └─────────────────────────────────────┘
 ```
 
+<!--
+Montrer les trois parties du système.
+Laravel fait le lien entre l'écran et les données.
+Cette organisation aide à modifier le système plus tard.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -299,6 +356,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 - 🛒 **Commande** (table, plats, statut, montant total)
 - 👤 **Utilisateur** (nom, email, rôle, permissions)
 
+<!--
+Présenter les données importantes du système.
+Un menu contient des plats. Le client peut faire une réservation et une commande.
+Chaque utilisateur a un rôle dans le système.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -313,6 +376,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 4. 👨‍🍳 Cuisinier met à jour le statut de préparation
 5. 🍽️ Serveur est notifié et sert le plat
 6. 💰 Génération automatique de la facture
+
+<!--
+Raconter les étapes de la commande, du menu à la facture.
+La cuisine reçoit la commande rapidement.
+Le serveur et le cuisinier peuvent suivre la commande.
+-->
 
 ---
 
@@ -332,6 +401,12 @@ Les restaurants font face à plusieurs défis quotidiens qui impactent leur effi
 - ⚡ **Alpine.js** - Framework JavaScript léger et réactif
 - 🎨 **Tailwind CSS** - Framework CSS utility-first
 - 🖼️ **Blade Templates** - Moteur de templates Laravel
+
+<!--
+Laravel et MySQL sont les outils principaux du serveur.
+Sanctum aide à vérifier les utilisateurs.
+Alpine.js, Tailwind et Blade servent à faire les pages.
+-->
 
 ---
 
@@ -358,6 +433,12 @@ app/Http/Controllers/    → API et Web Controllers
 resources/views/         → Interfaces Blade + Alpine.js
 routes/api.php          → Routes API REST
 ```
+
+<!--
+Cette liste montre les outils utilisés dans le projet.
+Les dossiers séparent les modèles, les pages et les routes.
+Cette organisation aide à trouver les fichiers.
+-->
 
 ---
 
@@ -391,6 +472,12 @@ class PlatController extends Controller
 }
 ```
 
+<!--
+Ce code montre comment le système gère les plats.
+Il montre seulement les plats disponibles et leur catégorie.
+Le système vérifie les informations avant d'ajouter un plat.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -407,6 +494,12 @@ class PlatController extends Controller
 - 🔄 Module de réservation (en cours de finalisation)
 - 🔄 Écran cuisine temps réel (en développement)
 
+<!--
+Présenter ce qui est déjà terminé et ce qui continue.
+Le tableau de bord et la gestion des plats sont prêts.
+Les réservations et l'écran de cuisine sont encore en travail.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -416,6 +509,12 @@ class PlatController extends Controller
 ![width:1000px](dashboard.png)
 
 **Dashboard Principal** - Vue d'ensemble des statistiques et de l'activité du restaurant
+
+<!--
+Présenter les informations sur cette image.
+Le gérant voit vite les activités du restaurant.
+Montrer la même page dans la démonstration si possible.
+-->
 
 ---
 
@@ -434,6 +533,12 @@ class PlatController extends Controller
 - ✅ Tests unitaires et d'intégration
 - ✅ Performance optimisée
 
+<!--
+Présenter les résultats principaux du projet.
+Dire que la plateforme est simple, stable et sûre.
+Dire que les buts principaux sont atteints.
+-->
+
 ---
 
 <!-- _class: content -->
@@ -448,6 +553,12 @@ class PlatController extends Controller
 - 📊 **Analytics avancées** - Prédictions avec IA
 - 🌐 **Support multi-restaurants** - Gestion de chaînes
 - 🔔 **Notifications push** - Alertes en temps réel
+
+<!--
+Présenter des idées pour le futur, pas des outils déjà prêts.
+Parler de l'application mobile et du paiement en ligne.
+Ces idées peuvent aider le projet à grandir.
+-->
 
 ---
 
@@ -470,6 +581,12 @@ class PlatController extends Controller
 - 🔄 Versioning avec Git/GitHub
 - 📝 Documentation technique professionnelle
 
+<!--
+Présenter les compétences apprises pendant ce projet.
+Parler aussi de l'analyse, des idées et des documents.
+Ces compétences seront utiles dans d'autres projets.
+-->
+
 ---
 
 <!-- _class: title -->
@@ -486,28 +603,8 @@ class PlatController extends Controller
 
 <br/>
 
-### 📧 Contact
-
-**Mohammed Yassir MESBAHI** - mesbahi@solicode.ma
-
----
-
-<!-- _paginate: false -->
-<!-- _footer: '' -->
-<!-- _class: title -->
-
-# 📞 Informations de Contact
-
-<br/>
-
-**Apprenant**
-Mohammed Yassir MESBAHI
-📧 mesbahi@solicode.ma
-
-**Encadrant**
-ES-SARRAJ Fouad
-📧 Solicode - Formation Développement Digital
-
-<br/>
-
-**OFPPT Solicode © 2026**
+<!--
+Remercier le jury et le public.
+Inviter les personnes à poser des questions.
+Proposer de montrer le site ou le code du projet.
+-->
