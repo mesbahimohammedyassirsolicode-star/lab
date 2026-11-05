@@ -4,8 +4,8 @@
 - [x] Créer un CRUD avec Superpowers
 - [ ] Décrire chaque skills utilisée
 - [x] Créer un schéma du flux de travail
-- [x] Créer des lab sur :
-  - [x] les skills
-  - [x] les agents
-  - [x] les sub-agents
+- [] Créer des lab sur :
+  - [] les skills
+  - [] les agents
+  - [] les sub-agents
 - [ ] Comprendre la différence entre un agent et un sous-agent
