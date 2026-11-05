@@ -1,11 +1,11 @@
-- [x ] Comprendre la différence entre les compétences et les plugins
-- [ x] Voir un exemple de plugin et de skills
-- [ x] Tester Superpowers et d'autres outils comme GSD
-- [ x] Créer un CRUD avec Superpowers
+- [x] Comprendre la différence entre les compétences et les plugins
+- [x] Voir un exemple de plugin et de skills
+- [x] Tester Superpowers et d'autres outils comme GSD
+- [x] Créer un CRUD avec Superpowers
 - [ ] Décrire chaque skills utilisée
-- [ x] Créer un schéma du flux de travail
-- [ x] Créer des lab sur :
-  - [ x] les skills
-  - [ x] les agents
-  - [ x] les sub-agents
+- [x] Créer un schéma du flux de travail
+- [x] Créer des lab sur :
+  - [x] les skills
+  - [x] les agents
+  - [x] les sub-agents
 - [ ] Comprendre la différence entre un agent et un sous-agent
