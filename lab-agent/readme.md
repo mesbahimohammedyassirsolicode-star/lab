@@ -1,35 +1,43 @@
 # lab-agent
 
-## objectif 
+## Objectif
 
- objectif this lab realisé 
--list des skills pour devlepo a projet fill rouge
- 
-##
--feature-dev
+Objectif de ce lab  :
 
-##
--superpowers
--GSD
--GSTACK
--Karpathy Prompting Guidelines & Matt Pocock Skills
+- faire une liste de compétences pour créer un projet du début à la fin
 
-## antigravity
--workflow
+## Plugins utiles
 
-## labs
--lab prompt
--lab agent
--lab sub-agent
+- feature-dev
+- claude-md-management
 
-##
--creat an crud categorie avec notre architicture n2
-    -workflow execute
-    - description de chaque étape "skills utilisé"
-    - 
-## Réferance 
+## Plugins avancés
+
+- superpowers
+- GSD
+- GSTACK
+- Karpathy Prompting Guidelines & Matt Pocock Skills
+
+## Antigravity
+
+- workflow
+  
+## plugin
+- commands
+
+## Lab
+- lab-skiils
+- lab-agent
+-  lab-sub-agent
+
+## Tester le plugin avancé
+
+- créer un CRUD pour gérer les catégories avec notre architecture n° 2
+  - exécuter le flux de travail
+  - décrire chaque étape et les compétences utilisées
+
+## Références
+
 - https://agentskills.io/home
 - https://github.com/benjaminasterA/antigravity-awesome-skills
 - https://github.com/sickn33/agentic-awesome-skills
-- 
-- 
