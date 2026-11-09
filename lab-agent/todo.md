@@ -1,11 +1,15 @@
-- [x] Comprendre la différence entre les compétences et les plugins
+- [x] Comprendre la différence entre les skills et les plugins
+
 - [x] Voir un exemple de plugin et de skills
-- [x] Tester Superpowers et d'autres outils comme GSD
-- [x] Créer un CRUD avec Superpowers
-- [ ] Décrire chaque skills utilisée
-- [x] Créer un schéma du flux de travail
-- [x] Créer des lab sur :
-  - [x] les skills
-  - [x] les agents
+- [] Créer un schéma du flux de travail
+- [] propose un skill pour quelle travail
+- [] skill par technologie ("exmp:skill frontend='alpine , tailwaind, preline' backend="skill-backend")
+- 
+
+
+- [] Créer des lab sur :
+  - [] les skills
+  - [] les agents
   - [] les sub-agents
 - [ ] Comprendre la différence entre un agent et un sous-agent
+- [ ]  Tester Superpowers et d'autres outils comme GSD

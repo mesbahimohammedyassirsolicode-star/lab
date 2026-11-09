@@ -1,0 +1,44 @@
+{
+  "name": "lab-skills-copilot-plugin",
+  "version": "1.0.0",
+  "description": "GitHub Copilot workspace instructions for full-stack academic prototype development with Laravel, Alpine.js, and Preline UI",
+  "keywords": [
+    "github-copilot",
+    "copilot-instructions",
+    "laravel",
+    "alpine.js",
+    "preline-ui",
+    "tailwind",
+    "fullstack",
+    "skill-engineering",
+    "academic",
+    "prototype"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solicode/lab-skills-copilot-plugin"
+  },
+  "author": "Solicode",
+  "license": "MIT",
+  "files": [
+    ".github/copilot-instructions.md",
+    "README.md"
+  ],
+  "engines": {
+    "copilot": ">=1.0.0"
+  },
+  "copilot": {
+    "instructionsFile": ".github/copilot-instructions.md",
+    "skills": [
+      "lab-dev",
+      "plugin-dev",
+      "lab-skill-engineering"
+    ],
+    "stack": {
+      "backend": "Laravel 11",
+      "frontend": "Alpine.js + Tailwind CSS",
+      "ui": "Preline UI",
+      "database": "MySQL/MariaDB"
+    }
+  }
+}
