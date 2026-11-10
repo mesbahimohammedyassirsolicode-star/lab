@@ -28,7 +28,7 @@ namespace {
     use App\Models\User;
     use App\Utils\Formatter;
 
-    $user = new User("Aymane");
+    $user = new User("MOHAMMED YASSIR");
 
     echo "Nom : " . $user->getName() . "\n";
     echo "Nom formaté : " . Formatter::highlight($user->getName()) . "\n";
