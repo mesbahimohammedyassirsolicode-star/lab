@@ -6,74 +6,75 @@ size: 16:9
 ---
 
 # lab-php
-## Error Handling, Namespaces, and Traits
+## Les erreurs, les namespaces et les traits
 
-**Student:** Mohammed Yassir Mesbahi  
-**Supervisor:ES-SARRAJ Fouad
-**Course / group:** [To be completed]
-
----
-
-# Presentation Plan
-
-1. Introduction and technical stack
-2. Error and exception handling
-3. Namespaces
-4. Traits
-5. Student problem and proposed solution
-6. Quick Start and demonstrations
+**Étudiant :** Mohammed Yassir Mesbahi  
+**Encadrant :** ES-SARRAJ Fouad  
+**Formation / groupe :** [À compléter]
 
 ---
 
-# Introduction & Technical Stack
+# Plan de la présentation
 
-This lab introduces three PHP concepts through small, runnable examples:
-
-- Handling exceptional situations
-- Organizing classes with namespaces
-- Reusing methods with traits
-
-**Stack:** PHP CLI, PHP 8.0 or later  
-**Verified environment:** PHP 8.5.12
-
-The examples are standalone demonstrations, not features integrated into an application.
+1. Introduction et stack technique
+2. La gestion des erreurs et des exceptions
+3. Les namespaces
+4. Les traits
+5. Problème et solution de l'étudiant
+6. Démarrage rapide et démonstrations
 
 ---
 
-# Quick Start
+# Introduction et stack technique
 
-From the repository root, enter the lab directory and check PHP:
+Ce lab présente trois notions de PHP.
+Chaque notion a un exemple court. On peut le lancer dans le terminal.
+
+- Le traitement des situations impossibles
+- L'organisation des classes avec les namespaces
+- La réutilisation du code avec les traits
+
+**Stack :** PHP CLI, PHP 8.0 ou plus  
+**Environnement testé :** PHP 8.4.25
+
+Les exemples sont des démonstrations seules. Ils ne sont pas dans une application.
+
+---
+
+# Démarrage rapide
+
+Depuis la racine du dépôt, on entre dans le dossier du lab :
 
 ```bash
 cd lab-php
 php -v
 ```
 
-Run a PHP one-line **Hello World**:
+On teste PHP avec une seule ligne. C'est un **Hello World** :
 
 ```bash
 php -r "echo 'Hello, PHP!', PHP_EOL;"
 ```
 
-Expected output: `Hello, PHP!`
+Résultat attendu : `Hello, PHP!`
 
 ---
 
-# Definition: Errors and Exceptions
+# Définition : les erreurs et les exceptions
 
-- An **error** indicates a problem during execution.
-- An **exception** represents an exceptional situation that code can throw and handle.
-- `try` wraps code that may throw an exception.
-- `catch` handles a matching exception.
-- `finally` runs whether an exception occurred or not.
+- Une **erreur** est un problème pendant l'exécution du code.
+- Une **exception** est une situation impossible. Le code peut la lancer et la traiter.
+- `try` contient le code qui peut lancer une exception.
+- `catch` traite l'exception.
+- `finally` s'exécute dans tous les cas.
 
-The example defines an `AgeInvalideException` and catches invalid ages.
+Dans l'exemple, on a une classe `AgeInvalideException`. Le code traite les âges invalides.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Handling an Exception
+# Exemple : le traitement d'une exception
 
 ```php
 try {
@@ -85,29 +86,29 @@ try {
 }
 ```
 
-Run the complete example from `lab-php`:
+On lance l'exemple complet depuis `lab-php` :
 
 ```bash
 php examples/gestion-erreurs/example.php
 ```
 
-The custom exception is caught, its message is displayed, and the `finally` block runs.
+L'exception est attrapée. Le message s'affiche. Le bloc `finally` s'exécute après.
 
 ---
 
-# Definition: Namespace
+# Définition : le namespace
 
-A **namespace** groups related classes and helps prevent class-name conflicts.
+Un **namespace** regroupe des classes. Il évite les problèmes de noms.
 
-- `App\Models` contains the `User` class.
-- `App\Utils` contains the `Formatter` class.
-- `use` imports these classes so the main code can refer to them by their short names.
+- `App\Models` contient la classe `User`.
+- `App\Utils` contient la classe `Formatter`.
+- `use` importe les classes. Le code principal peut les utiliser avec leur nom court.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Using Namespaces
+# Exemple : les namespaces
 
 ```php
 use App\Models\User;
@@ -117,31 +118,31 @@ $user = new User("Aymane");
 echo Formatter::highlight($user->getName());
 ```
 
-Run the complete example from `lab-php`:
+On lance l'exemple complet depuis `lab-php` :
 
 ```bash
 php examples/namespaces/example.php
 ```
 
-Expected output includes the formatted name `AYMANE`.
+Le résultat contient le nom formaté `AYMANE`.
 
 ---
 
-# Definition: Trait
+# Définition : le trait
 
-A **trait** packages methods that multiple classes can reuse.
+Un **trait** contient des méthodes. Plusieurs classes peuvent les réutiliser.
 
-- A class includes a trait with `use`.
-- The example's `Loggable` trait provides a `log()` method.
-- Both `UserService` and `OrderService` use that method.
+- Une classe utilise un trait avec `use`.
+- Dans l'exemple, le trait `Loggable` donne la méthode `log()`.
+- `UserService` et `OrderService` utilisent cette méthode.
 
-A trait is a code-reuse mechanism, not a standalone class or a substitute for every use of inheritance.
+Un trait sert à réutiliser du code. Il ne remplace pas l'héritage dans tous les cas.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Reusing a Trait
+# Exemple : la réutilisation avec un trait
 
 ```php
 trait Loggable
@@ -158,29 +159,29 @@ class UserService
 }
 ```
 
-Run both class demonstrations from `lab-php`:
+On lance l'exemple complet depuis `lab-php` :
 
 ```bash
 php examples/traits/example.php
 ```
 
-Both services print a log message using the same trait method.
+Les deux services affichent un message de log. Ils utilisent la même méthode.
 
 ---
 
-# Student Problem
+# Problème de l'étudiant
 
-**Concrete problem:** [To be completed by the student]
+**Problème concret :** [À compléter par l'étudiant]
 
-Describe the real situation that motivates using one or more of these PHP concepts.
+Expliquez la vraie situation qui oblige à utiliser une de ces trois notions.
 
 ---
 
-# Proposed Solution & Demonstrations
+# Solution proposée et démonstrations
 
-**Proposed solution:** [To be completed by the student]
+**Solution proposée :** [À compléter par l'étudiant]
 
-The lab's runnable demonstrations are:
+Les démonstrations du lab sont :
 
 ```bash
 php examples/gestion-erreurs/example.php
@@ -188,4 +189,4 @@ php examples/namespaces/example.php
 php examples/traits/example.php
 ```
 
-Compare their output with the code and explain how the chosen concept addresses the stated problem.
+Regardez le résultat de chaque commande. Comparez-le avec le code. Expliquez comment la notion choisie répond au problème posé.

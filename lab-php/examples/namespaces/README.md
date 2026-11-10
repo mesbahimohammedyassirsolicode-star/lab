@@ -1,41 +1,41 @@
-# Namespace
+# Le namespace
 
 ## Objectif
 
-Cet exemple montre comment organiser des classes dans des espaces de noms différents pour éviter les conflits de noms.
+Voir comment on range les classes dans des espaces de noms différents. On évite les problèmes de noms.
 
-## Concept
+## Le concept
 
-Un namespace permet de regrouper des classes par domaine fonctionnel.
+Un namespace regroupe des classes par domaine.
 
 Exemple :
 
 - `App\Models` pour les modèles ;
-- `App\Utils` pour les utilitaires.
+- `App\Utils` pour les outils.
 
-Cela évite d'avoir deux classes portant le même nom dans le même projet.
+Comme ça, on peut avoir deux classes avec le même nom dans le même projet.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-php
 php examples/namespaces/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
 - La classe `User` est créée dans `App\Models`.
 - La classe `Formatter` est créée dans `App\Utils`.
-- Le code principal importe les classes avec `use` puis les utilise sans conflit.
+- Le code principal importe les classes avec `use`. Ensuite, il les utilise sans problème.
 
-## Cas d'usage
+## Dans le projet
 
-Les namespaces sont indispensables dans :
+Les namespaces sont utiles pour :
 
 - les applications de taille moyenne ou grande ;
-- les projets qui combinent plusieurs modules ;
-- les bibliothèques ou frameworks.
+- les projets avec plusieurs modules ;
+- les bibliothèques et les frameworks.
 
 ## À retenir
 
-Les namespaces rendent le code plus lisible, plus organisé et plus sûr.
+Les namespaces rendent le code plus lisible, plus rangé et plus sûr.

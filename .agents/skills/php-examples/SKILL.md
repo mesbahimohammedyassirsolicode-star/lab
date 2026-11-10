@@ -34,7 +34,7 @@ Use it to create or adapt PHP exercises, examples of language concepts, Laravel 
 
 ## Rules
 
-- Respond in the language of the request while preserving the language and style of existing files.
+- Respond in the language of the request while preserving the language and style of existing files. For this workspace, write the tutorials in simple French (A1 level): short sentences, common words, one idea per sentence.
 - Do not include a framework demonstration when a simpler standalone version would be clearer; if it depends on Laravel, follow its conventions rather than simulating its APIs.
 - Do not expose secrets and never modify `.env`.
 - Avoid extra dependencies for simple language examples.

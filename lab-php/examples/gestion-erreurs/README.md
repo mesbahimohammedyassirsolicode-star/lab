@@ -1,38 +1,38 @@
-# Gestion des erreurs et des exceptions
+# La gestion des erreurs et des exceptions
 
 ## Objectif
 
-Cette exemple montre comment capturer une erreur avec `try`, `catch` et `finally` en PHP.
+Voir comment on trouve une erreur avec `try`, `catch` et `finally` en PHP.
 
-## Concept
+## Le concept
 
 - `try` contient le code qui peut échouer.
-- `catch` récupère l'exception et affiche un message clair.
-- `finally` s'exécute toujours, même si une exception est levée.
+- `catch` récupère l'exception. Il affiche un message clair.
+- `finally` s'exécute toujours. Il s'exécute même s'il y a une exception.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-php
 php examples/gestion-erreurs/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
-Le script commence par un âge valide puis tente un âge invalide.
+Le script commence avec un âge valide. Après, il essaie un âge invalide.
 
-Lorsque `verifierAge(-2)` est appelé, une exception est levée et capturée par le bloc `catch`.
+Quand `verifierAge(-2)` est appelé, une exception est lancée. Le bloc `catch` la récupère.
 
-Le bloc `finally` s'exécute ensuite pour confirmer le nettoyage.
+Le bloc `finally` s'exécute après. Il confirme le nettoyage.
 
-## Cas d'usage
+## Dans le projet
 
-Ceci est utile pour :
+C'est utile pour :
 
-- valider des données utilisateur ;
-- gérer des accès non autorisés ;
-- sécuriser les opérations sensibles.
+- vérifier les données d'un formulaire ;
+- gérer un accès interdit ;
+- protéger une opération importante.
 
 ## À retenir
 
-Une exception ne doit pas être ignorée : il faut la traiter proprement à la frontière de l'application.
+On ne doit pas ignorer une exception. On la traite à la frontière de l'application.

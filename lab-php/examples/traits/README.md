@@ -1,40 +1,40 @@
-# Trait
+# Le trait
 
 ## Objectif
 
-Cet exemple montre comment réutiliser un même comportement entre plusieurs classes avec un trait.
+Voir comment plusieurs classes réutilisent le même comportement avec un trait.
 
-## Concept
+## Le concept
 
-Un `trait` contient des méthodes que l'on peut réutiliser dans plusieurs classes.
+Un `trait` contient des méthodes. On peut les réutiliser dans plusieurs classes.
 
-Ici, le trait `Loggable` fournit une méthode `log()` utilisée par :
+Dans cet exemple, le trait `Loggable` donne la méthode `log()`. Elle est utilisée par :
 
 - `UserService`
 - `OrderService`
 
-Cela évite de dupliquer le même code dans plusieurs classes.
+Comme ça, on ne répète pas le même code dans plusieurs classes.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-php
 php examples/traits/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
-Chaque classe utilise le même trait et affiche un message de log avant d'exécuter sa logique métier.
+Chaque classe utilise le même trait. Elle affiche un message de log avant de faire son travail.
 
-## Cas d'usage
+## Dans le projet
 
 Les traits sont utiles pour :
 
 - la journalisation ;
 - la validation ;
-- la gestion de cache ;
+- le cache ;
 - les méthodes communes à plusieurs classes.
 
 ## À retenir
 
-Le trait est une solution de réutilisation de code sans dépendre de l'héritage multiple.
+Le trait est une façon de réutiliser du code. On n'a pas besoin de l'héritage multiple.

@@ -1,24 +1,24 @@
-# Méthodes et propriétés statiques
+# Les méthodes et les propriétés statiques
 
 ## Objectif
 
-Montrer comment une propriété et une méthode statiques appartiennent à la classe elle-même.
+Voir comment une propriété et une méthode statiques appartiennent à la classe. Elles n'appartiennent pas à un objet.
 
-## Concept
+## Le concept
 
-- `OrderNumber` possède une propriété statique `$sequence` partagée par tous les appels.
-- `next()` incrémente cette séquence et renvoie une référence unique.
-- `generated()` lit la valeur courante sans créer d'instance.
-- Les membres statiques sont appelés avec `OrderNumber::next()`, pas avec `$objet->next()`.
+- `OrderNumber` a la propriété statique `$sequence`. Tous les appels la partagent.
+- `next()` augmente cette séquence. Il donne une nouvelle référence.
+- `generated()` lit la valeur actuelle. Il ne crée pas d'objet.
+- On appelle un membre statique avec `OrderNumber::next()`. On ne l'appelle pas avec `$objet->next()`.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-poo
 php examples/statique/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
 ```text
 CMD-0001
@@ -27,12 +27,12 @@ CMD-0003
 Numéros générés : 3
 ```
 
-Chaque appel à `next()` produit un numéro différent, car la séquence est partagée au niveau de la classe.
+Chaque appel à `next()` donne un numéro différent. La séquence est partagée au niveau de la classe.
 
-## Cas d'usage
+## Dans le projet
 
-Dans le projet de gestion de restaurants, un générateur statique de références permet d'attribuer un numéro unique aux commandes sans dépendre d'une instance particulière.
+Dans le projet de gestion de restaurants, un générateur statique donne un numéro unique à chaque commande. Il ne dépend pas d'une instance particulière.
 
 ## À retenir
 
-Utilisez le statique pour un état ou un comportement réellement lié à la classe. Abuser des membres statiques rend le code plus difficile à tester et à faire évoluer.
+Utilisez le statique pour un état ou une aide liée à la classe. Trop de statique rend le code difficile à tester et à faire évoluer.

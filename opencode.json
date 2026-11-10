@@ -1,4 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": [".agents/rules/contex.md"]
+  "instructions": [".agents/rules/contex.md", ".agents/rules/lab-conventions.md"]
 }

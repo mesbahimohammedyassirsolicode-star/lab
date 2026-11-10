@@ -1,38 +1,38 @@
-# Classe abstraite
+# La classe abstraite
 
 ## Objectif
 
-Montrer comment une classe abstraite sert de modèle commun à plusieurs classes concrètes.
+Voir comment une classe abstraite sert de modèle pour d'autres classes.
 
-## Concept
+## Le concept
 
-- `MenuItem` est déclarée `abstract` : elle ne peut pas être instanciée directement.
-- Elle définit une méthode abstraite `category()` que chaque sous-classe doit implémenter.
-- Elle fournit aussi des méthodes concrètes (`price()` et `label()`) réutilisées par les sous-classes.
-- `Dish` et `Drink` héritent de `MenuItem` et fournissent chacune leur catégorie.
+- `MenuItem` est une classe `abstract`. On ne peut pas créer un objet `MenuItem` directement.
+- `MenuItem` a une méthode abstraite `category()`. Chaque sous-classe doit l'écrire.
+- `MenuItem` a aussi des méthodes normales : `price()` et `label()`. Les sous-classes les réutilisent.
+- `Dish` et `Drink` héritent de `MenuItem`. Chacune donne sa catégorie.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-poo
 php examples/classe-abstraite/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
-Le script crée un plat et une boisson, puis affiche une ligne formatée pour chacun :
+Le script crée un plat et une boisson. Il affiche une ligne pour chacun :
 
 ```text
 [Plat] Tajine poulet - 85,00 EUR
 [Boisson] Thé à la menthe - 15,00 EUR
 ```
 
-La ligne `new MenuItem(...)` est commentée : la décommenter provoque une erreur fatale, car une classe abstraite ne peut pas être instanciée.
+La ligne `new MenuItem(...)` est commentée. Si on enlève le commentaire, PHP donne une erreur fatale. Une classe abstraite ne peut pas être instanciée.
 
-## Cas d'usage
+## Dans le projet
 
-Dans le projet de gestion de restaurants, une classe abstraite `MenuItem` permet de traiter les plats et les boissons de la même manière, tout en imposant que chaque type fournisse sa catégorie.
+Dans le projet de gestion de restaurants, la classe abstraite `MenuItem` permet de traiter les plats et les boissons de la même façon. Chaque type doit quand même dire sa catégorie.
 
 ## À retenir
 
-Une classe abstraite partage du code concret et impose un contrat partiel. Elle se situe entre une classe ordinaire et une interface.
+Une classe abstraite partage du code déjà écrit. Elle impose aussi une partie du contrat. Elle se trouve entre la classe normale et l'interface.

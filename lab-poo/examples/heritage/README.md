@@ -1,36 +1,36 @@
-# Héritage
+# L'héritage
 
 ## Objectif
 
-Montrer comment une classe enfant réutilise les propriétés et les méthodes d'une classe parente.
+Voir comment une classe enfant réutilise le code de la classe parent.
 
-## Concept
+## Le concept
 
 - `Order` contient la référence, les articles et le calcul du total.
 - `DineInOrder` et `TakeawayOrder` étendent `Order` avec `extends`.
-- Les deux classes appellent `parent::__construct()` et `parent::describe()` pour réutiliser le comportement commun.
-- Chaque sous-classe ajoute une information propre : le numéro de table ou le nom du client.
+- Les deux classes appellent `parent::__construct()` et `parent::describe()`. Elles réutilisent le code commun.
+- Chaque sous-classe ajoute une information. Pour `DineInOrder`, c'est le numéro de table. Pour `TakeawayOrder`, c'est le nom du client.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-poo
 php examples/heritage/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
 ```text
 CMD-001 (2 article(s)) : 100,00 EUR - sur place, table 12
 CMD-002 (1 article(s)) : 95,00 EUR - à emporter pour Aymane
 ```
 
-Les méthodes `addItem()` et `totalCents()` sont définies une seule fois dans `Order` et réutilisées par les deux sous-classes.
+Les méthodes `addItem()` et `totalCents()` sont écrites une seule fois. Elles sont dans `Order`. Les deux sous-classes les utilisent.
 
-## Cas d'usage
+## Dans le projet
 
-Dans le projet de gestion de restaurants, une commande sur place et une commande à emporter partagent le même socle, mais ajoutent des informations différentes.
+Dans le projet de gestion de restaurants, une commande sur place et une commande à emporter ont le même socle. Elles ont des informations différentes.
 
 ## À retenir
 
-L'héritage exprime une relation « est un ». Utilisez-le lorsque la classe enfant est réellement une spécialisation de la classe parente.
+L'héritage veut dire « est un ». Utilisez-le quand la classe enfant est vraiment une spécialisation de la classe parent.

@@ -6,78 +6,79 @@ size: 16:9
 ---
 
 # lab-poo
-## Deepening Object-Oriented Programming in PHP
+## La POO en PHP : les notions avancées
 
-**Student:** [Name]  
-**Supervisor:** [Name]  
-**Course / group:** [To be completed]
+**Étudiant :** Mohammed Yassir Mesbahi  
+**Encadrant :** ES-SARRAJ Fouad  
+**Formation / groupe :** [À compléter]
 
 ---
 
-# Presentation Plan
+# Plan de la présentation
 
-1. Introduction and technical stack
-2. Abstract class
+1. Introduction et stack technique
+2. Classe abstraite
 3. Interface
-4. Inheritance
-5. Polymorphism
+4. Héritage
+5. Polymorphisme
 6. Encapsulation
-7. Static methods and properties
-8. Student problem and proposed solution
-9. Quick Start and demonstrations
+7. Méthodes et propriétés statiques
+8. Problème et solution de l'étudiant
+9. Démarrage rapide et démonstrations
 
 ---
 
-# Introduction & Technical Stack
+# Introduction et stack technique
 
-This lab explores six object-oriented programming concepts in PHP through small, runnable examples:
+Ce lab présente six notions de la POO en PHP.
+Chaque notion a un exemple court. On peut le lancer dans le terminal.
 
-- Abstract classes and interfaces
-- Inheritance and polymorphism
-- Encapsulation
-- Static methods and properties
+- Les classes abstraites et les interfaces
+- L'héritage et le polymorphisme
+- L'encapsulation
+- Les méthodes et les propriétés statiques
 
-**Stack:** PHP CLI, PHP 8.0 or later  
-**Verified environment:** PHP 8.4.25
+**Stack :** PHP CLI, PHP 8.0 ou plus  
+**Environnement testé :** PHP 8.4.25
 
-The examples are standalone demonstrations linked to the restaurant management project, not features integrated into the Laravel application.
+Les exemples sont des démonstrations seules. Ils sont liés au projet de gestion de restaurants. Ils ne sont pas dans l'application Laravel.
 
 ---
 
-# Quick Start
+# Démarrage rapide
 
-From the repository root, enter the lab directory and check PHP:
+Depuis la racine du dépôt, on entre dans le dossier du lab :
 
 ```bash
 cd lab-poo
 php -v
 ```
 
-Run a PHP one-line **Hello World**:
+On teste PHP avec une seule ligne. C'est un **Hello World** :
 
 ```bash
 php -r "echo 'Hello, PHP!', PHP_EOL;"
 ```
 
-Expected output: `Hello, PHP!`
+Résultat attendu : `Hello, PHP!`
 
 ---
 
-# Definition: Abstract Class
+# Définition : la classe abstraite
 
-An **abstract class** is a partial model that cannot be instantiated directly.
+Une **classe abstraite** est un modèle partiel. On ne peut pas créer un objet avec elle.
 
-- It can contain concrete methods and abstract methods.
-- Subclasses must implement every abstract method.
-- It is used when several classes share code and a common contract.
+- Elle peut avoir des méthodes normales et des méthodes abstraites.
+- Chaque sous-classe doit écrire les méthodes abstraites.
+- Elle sert quand plusieurs classes ont le même code et le même contrat.
 
-The example defines an abstract `MenuItem` with a concrete `label()` method and an abstract `category()` method.
+Dans l'exemple, `MenuItem` est abstraite. Elle a une méthode abstraite `category()`. Elle a aussi la méthode `label()`.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Abstract Class
+# Exemple : la classe abstraite
 
 ```php
 abstract class MenuItem
@@ -100,31 +101,31 @@ class Dish extends MenuItem
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/classe-abstraite/example.php
 ```
 
-Expected output: `[Plat] Tajine poulet - 85,00 EUR`
+Résultat attendu : `[Plat] Tajine poulet - 85,00 EUR`
 
 ---
 
-# Definition: Interface
+# Définition : l'interface
 
-An **interface** declares a contract without providing an implementation.
+Une **interface** décrit un contrat. Elle ne donne pas le code de la méthode.
 
-- A class implements an interface with `implements`.
-- The interface lists the methods the class must provide.
-- Code can depend on the interface instead of a concrete class.
+- Une classe utilise une interface avec `implements`.
+- L'interface liste les méthodes que la classe doit avoir.
+- Le code peut utiliser l'interface. Il ne connaît pas la classe exacte.
 
-The example defines `PaymentMethod` and two implementations: `CashPayment` and `CardPayment`.
+Dans l'exemple, on a l'interface `PaymentMethod`. Elle a deux classes : `CashPayment` et `CardPayment`.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Interface
+# Exemple : l'interface
 
 ```php
 interface PaymentMethod
@@ -142,32 +143,32 @@ class CashPayment implements PaymentMethod
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/interface/example.php
 ```
 
-Expected output: `Paiement en espèces : 25,00 EUR`
+Résultat attendu : `Paiement en espèces : 25,00 EUR`
 
 ---
 
-# Definition: Inheritance
+# Définition : l'héritage
 
-**Inheritance** lets a child class reuse the properties and methods of a parent class.
+**L'héritage** permet à une classe enfant d'utiliser le code de la classe parent.
 
-- The child class uses `extends`.
-- It can call `parent::__construct()` and `parent::method()`.
-- It can add its own properties and override methods.
-- It expresses an "is a" relationship.
+- La classe enfant utilise `extends`.
+- Elle peut appeler `parent::__construct()` et `parent::methode()`.
+- Elle peut ajouter ses propriétés et changer une méthode.
+- L'héritage veut dire « est un ».
 
-The example defines `Order`, then `DineInOrder` and `TakeawayOrder`.
+Dans l'exemple, on a la classe `Order`. Ensuite on a `DineInOrder` et `TakeawayOrder`.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Inheritance
+# Exemple : l'héritage
 
 ```php
 class Order
@@ -193,31 +194,32 @@ class DineInOrder extends Order
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/heritage/example.php
 ```
 
-Expected output: `CMD-001 (2 article(s)) : 100,00 EUR - sur place, table 12`
+Résultat attendu : `CMD-001 (2 article(s)) : 100,00 EUR - sur place, table 12`
 
 ---
 
-# Definition: Polymorphism
+# Définition : le polymorphisme
 
-**Polymorphism** means the same method call can produce different behavior depending on the object.
+**Le polymorphisme** veut dire que le même appel de méthode donne des résultats différents.
+Le résultat dépend de l'objet réel.
 
-- A common parent class or interface defines the method.
-- Each subclass provides its own implementation.
-- The calling code does not need to know the concrete type.
+- Une classe parent ou une interface définit la méthode.
+- Chaque sous-classe écrit sa propre version.
+- Le code appelant n'a pas besoin de connaître le type exact.
 
-The example computes order totals differently for dine-in and takeaway orders.
+Dans l'exemple, le total d'une commande n'est pas le même sur place et à emporter.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Polymorphism
+# Exemple : le polymorphisme
 
 ```php
 foreach ($orders as $order) {
@@ -227,13 +229,13 @@ foreach ($orders as $order) {
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/polymorphisme/example.php
 ```
 
-Expected output:
+Résultat attendu :
 
 ```text
 Sur place (service 10 %) -> total : 110,00 EUR
@@ -242,21 +244,21 @@ Sur place (service 10 %) -> total : 110,00 EUR
 
 ---
 
-# Definition: Encapsulation
+# Définition : l'encapsulation
 
-**Encapsulation** protects an object's internal state.
+**L'encapsulation** protège les données de l'objet.
 
-- Properties are `private` or `protected`.
-- Public methods validate changes and expose only what is needed.
-- The object keeps its invariants valid.
+- Les propriétés sont `private` ou `protected`.
+- Les méthodes publiques vérifient les changements.
+- L'objet reste toujours dans un état correct.
 
-The example models a restaurant table whose capacity cannot be exceeded.
+Dans l'exemple, on a une table de restaurant. On ne peut pas dépasser sa capacité.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Encapsulation
+# Exemple : l'encapsulation
 
 ```php
 class RestaurantTable
@@ -280,31 +282,31 @@ class RestaurantTable
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/encapsulation/example.php
 ```
 
-Expected output: `Réservation refusée : Pas assez de places disponibles.`
+Résultat attendu : `Réservation refusée : Pas assez de places disponibles.`
 
 ---
 
-# Definition: Static Members
+# Définition : le statique
 
-**Static methods and properties** belong to the class, not to an instance.
+**Les méthodes et les propriétés statiques** appartiennent à la classe. Elles n'appartiennent pas à un objet.
 
-- A static property is shared by all calls.
-- A static method is called with `ClassName::method()`.
-- Use static members for class-level state or helpers.
+- Une propriété statique est partagée par tous les appels.
+- Une méthode statique s'appelle avec `NomDeLaClasse::methode()`.
+- Le statique est utile pour un état ou une aide liée à la classe.
 
-The example generates unique order references with a shared sequence.
+Dans l'exemple, on génère une référence unique pour chaque commande.
 
 ---
 
 <!-- _class: light -->
 
-# Example: Static Members
+# Exemple : le statique
 
 ```php
 class OrderNumber
@@ -322,29 +324,29 @@ class OrderNumber
 }
 ```
 
-Run the complete example from `lab-poo`:
+On lance l'exemple complet depuis `lab-poo` :
 
 ```bash
 php examples/statique/example.php
 ```
 
-Expected output: `CMD-0001`, then `CMD-0002`, then `CMD-0003`.
+Résultat attendu : `CMD-0001`, puis `CMD-0002`, puis `CMD-0003`.
 
 ---
 
-# Student Problem
+# Problème de l'étudiant
 
-**Concrete problem:** [To be completed by the student]
+**Problème concret :** [À compléter par l'étudiant]
 
-Describe the real situation that motivates using one or more of these object-oriented concepts.
+Expliquez la vraie situation qui oblige à utiliser une de ces notions de la POO.
 
 ---
 
-# Proposed Solution & Demonstrations
+# Solution proposée et démonstrations
 
-**Proposed solution:** [To be completed by the student]
+**Solution proposée :** [À compléter par l'étudiant]
 
-The lab's runnable demonstrations are:
+Les démonstrations du lab sont :
 
 ```bash
 php examples/classe-abstraite/example.php
@@ -355,4 +357,4 @@ php examples/encapsulation/example.php
 php examples/statique/example.php
 ```
 
-Compare their output with the code and explain how the chosen concept addresses the stated problem.
+Regardez le résultat de chaque commande. Comparez-le avec le code. Expliquez comment la notion choisie répond au problème posé.

@@ -1,20 +1,20 @@
 # lab-php
 
-## Objectives
+## Objectifs
 
-This lab briefly introduces three PHP concepts and provides a small runnable example for each:
+Ce lab présente trois notions de PHP. Chaque notion a un exemple court. On peut le lancer dans le terminal.
 
-- **Error and exception handling:** detect and handle exceptional situations with `try`, `catch`, and `finally`.
-- **Namespaces:** organize classes and avoid name conflicts.
-- **Traits:** reuse methods across classes without relying on multiple inheritance.
+- **La gestion des erreurs et des exceptions :** trouver une situation impossible. On la traite avec `try`, `catch` et `finally`.
+- **Les namespaces :** ranger les classes. On évite les problèmes de noms.
+- **Les traits :** réutiliser le même code dans plusieurs classes. On n'utilise pas l'héritage multiple.
 
-The examples are standalone teaching demonstrations; they are not integrated into an application.
+Les exemples sont des démonstrations seules. Ils ne sont pas dans une application.
 
-## Quick Start
+## Démarrage rapide
 
-Requirements: PHP 8.0 or later. The examples were checked with PHP 8.5.12.
+Il faut PHP 8.0 ou plus. Les exemples ont été testés avec PHP 8.4.25.
 
-From the repository root:
+Depuis la racine du dépôt :
 
 ```bash
 cd lab-php
@@ -22,7 +22,7 @@ php -v
 php -r "echo 'Hello, PHP!', PHP_EOL;"
 ```
 
-Run each example from the `lab-php` directory:
+Pour lancer un exemple, on reste dans le dossier `lab-php` :
 
 ```bash
 php examples/gestion-erreurs/example.php
@@ -30,8 +30,8 @@ php examples/namespaces/example.php
 php examples/traits/example.php
 ```
 
-Each example folder contains a README explaining the concept and how to run it.
+Chaque dossier d'exemple contient un `README.md`. Il explique la notion et la commande pour lancer l'exemple.
 
-## Presentation
+## Présentation
 
-See [presentation.md](./presentation.md) for the English Marp presentation plan.
+Le plan de la présentation se trouve dans [presentation.md](./presentation.md).

@@ -1,24 +1,24 @@
-# Encapsulation
+# L'encapsulation
 
 ## Objectif
 
-Montrer comment des propriétés privées protègent l'état interne d'un objet.
+Voir comment des propriétés privées protègent les données d'un objet.
 
-## Concept
+## Le concept
 
-- `RestaurantTable` garde `number`, `seats` et `reservedSeats` privés.
-- `reserve()` valide le nombre de personnes et empêche de dépasser la capacité.
-- `getAvailableSeats()` expose une information calculée sans révéler l'état brut.
-- L'état ne peut pas être modifié directement depuis l'extérieur de la classe.
+- `RestaurantTable` garde `number`, `seats` et `reservedSeats` en privé.
+- `reserve()` vérifie le nombre de personnes. Il refuse de dépasser la capacité.
+- `getAvailableSeats()` donne une information calculée. Elle ne montre pas l'état brut.
+- On ne peut pas changer l'état directement depuis l'extérieur de la classe.
 
-## Comment exécuter
+## Comment lancer l'exemple
 
 ```bash
 cd lab-poo
 php examples/encapsulation/example.php
 ```
 
-## Ce que vous observez
+## Ce que l'on voit
 
 ```text
 Table 12 - places disponibles : 4
@@ -27,12 +27,12 @@ Places disponibles : 2
 Réservation refusée : Pas assez de places disponibles.
 ```
 
-La deuxième réservation est refusée : la capacité de la table serait dépassée.
+La deuxième réservation est refusée. La capacité de la table serait dépassée.
 
-## Cas d'usage
+## Dans le projet
 
-Dans le projet de gestion de restaurants, l'encapsulation garantit qu'une table ne peut jamais être réservée au-delà de sa capacité, même si le reste de l'application évolue.
+Dans le projet de gestion de restaurants, l'encapsulation garantit qu'une table ne peut jamais être réservée au-delà de sa capacité. C'est vrai même si le reste de l'application change.
 
 ## À retenir
 
-L'encapsulation protège les invariants de l'objet. Les propriétés privées et les méthodes publiques forment une frontière contrôlée.
+L'encapsulation protège les règles de l'objet. Les propriétés privées et les méthodes publiques font une limite claire.

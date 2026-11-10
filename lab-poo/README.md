@@ -1,23 +1,24 @@
 # lab-poo
 
-## Objectives
+## Objectifs
 
-This lab explores six object-oriented programming concepts in PHP through small, runnable examples:
+Ce lab présente six notions de la programmation orientée objet (POO) en PHP.
+Chaque notion a un exemple simple. On peut le lancer directement dans le terminal.
 
-- **Abstract class:** define a model that cannot be instantiated directly.
-- **Interface:** declare a contract that classes must implement.
-- **Inheritance:** reuse the properties and methods of a parent class.
-- **Polymorphism:** call the same method on different objects and get different behavior.
-- **Encapsulation:** protect an object's data behind controlled methods.
-- **Static methods and properties:** attach state and behavior to the class itself.
+- **Classe abstraite :** créer un modèle. On ne peut pas l'utiliser directement.
+- **Interface :** définir les méthodes qu'une classe doit avoir.
+- **Héritage :** réutiliser les propriétés et les méthodes d'une autre classe.
+- **Polymorphisme :** utiliser la même méthode. Le résultat dépend de l'objet.
+- **Encapsulation :** protéger les données d'une classe.
+- **Méthodes et propriétés statiques :** utiliser des éléments liés à la classe.
 
-Each example is a standalone teaching demonstration linked to the restaurant management project (menu items, orders, payments, and tables). The examples are not integrated into the Laravel application.
+Les exemples sont des démonstrations seules. Ils sont liés au projet de gestion de restaurants : la carte, les commandes, les paiements et les tables. Ces exemples ne sont pas dans l'application Laravel.
 
-## Quick Start
+## Démarrage rapide
 
-Requirements: PHP 8.0 or later. The examples were checked with PHP 8.4.25.
+Il faut PHP 8.0 ou plus. Les exemples ont été testés avec PHP 8.4.25.
 
-From the repository root:
+Depuis la racine du dépôt :
 
 ```bash
 cd lab-poo
@@ -25,7 +26,7 @@ php -v
 php -r "echo 'Hello, PHP!', PHP_EOL;"
 ```
 
-Run each example from the `lab-poo` directory:
+Pour lancer un exemple, on reste dans le dossier `lab-poo` :
 
 ```bash
 php examples/classe-abstraite/example.php
@@ -36,19 +37,19 @@ php examples/encapsulation/example.php
 php examples/statique/example.php
 ```
 
-Each example folder contains a `README.md` explaining the concept, the expected output, and its link to the restaurant project.
+Chaque dossier d'exemple contient un `README.md`. Il explique la notion, le résultat attendu et le lien avec le projet de restaurants.
 
 ## Structure
 
-| Concept | Example | Tutorial |
+| Notion | Exemple | Explication |
 | --- | --- | --- |
-| Abstract class | `examples/classe-abstraite/example.php` | `examples/classe-abstraite/README.md` |
+| Classe abstraite | `examples/classe-abstraite/example.php` | `examples/classe-abstraite/README.md` |
 | Interface | `examples/interface/example.php` | `examples/interface/README.md` |
-| Inheritance | `examples/heritage/example.php` | `examples/heritage/README.md` |
-| Polymorphism | `examples/polymorphisme/example.php` | `examples/polymorphisme/README.md` |
+| Héritage | `examples/heritage/example.php` | `examples/heritage/README.md` |
+| Polymorphisme | `examples/polymorphisme/example.php` | `examples/polymorphisme/README.md` |
 | Encapsulation | `examples/encapsulation/example.php` | `examples/encapsulation/README.md` |
-| Static members | `examples/statique/example.php` | `examples/statique/README.md` |
+| Statique | `examples/statique/example.php` | `examples/statique/README.md` |
 
-## Presentation
+## Présentation
 
-See [presentation.md](./presentation.md) for the English Marp presentation plan.
+Le plan de la présentation se trouve dans [presentation.md](./presentation.md).

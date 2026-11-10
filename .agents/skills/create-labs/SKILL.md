@@ -22,7 +22,7 @@ Use this skill when you need to generate, update, or adapt lab content based on 
 
 1. Review the existing lab README and identify the actual learning goals, stack, tasks, and technical constraints.
 2. Find the generic presentation plan used by the project or workspace and reuse it as the basis for the lab structure.
-3. Write the lab content in English, adapting the generic sections to the real content and scope of the README.
+3. Write the lab content in simple French (A1 level), adapting the generic sections to the real content and scope of the README. Use short sentences, common words, and one idea per sentence.
 4. Place the presentation plan in `presentation.md` and do not duplicate it in the README.
 5. For a technical lab, include a Quick Start section and a working Hello World example. Verify that the commands, versions, and setup match the actual project.
 6. If the student problem or solution is not provided, do not invent it. Ask the user:
@@ -38,14 +38,17 @@ Use this skill when you need to generate, update, or adapt lab content based on 
 - Do not add a conclusion or thank-you slide.
 - Do not run Git commands if the user explicitly forbids it.
 - Do not invent the student's problem, chosen solution, or project history.
-- Write in English and align the content with what is actually present in the README.
+- Write in simple French (A1 level) and align the content with what is actually present in the README.
+- Always identify the student as `Mohammed Yassir Mesbahi` and the supervisor as `ES-SARRAJ Fouad` on the title slide of the presentation. Never leave a `[Name]` placeholder for them.
+- Keep the README, the presentation, and the example tutorials in the same simple French register so the whole lab reads as one document.
 
 ## Completion checklist
 
 - The lab title remains unchanged and uses the expected `lab-*` format.
 - The README and the presentation plan are consistent with the actual lab scope.
 - The presentation outline is placed in `presentation.md` only.
-- The lab content is written in English and adapted to the real README content.
+- The lab content is written in simple French (A1 level) and adapted to the real README content.
+- The presentation names the student `Mohammed Yassir Mesbahi` and the supervisor `ES-SARRAJ Fouad`.
 - The Quick Start and Hello World are included only when relevant to a technical lab.
 - Unverified student-specific sections are clearly marked as to be completed rather than stated as fact.
 
