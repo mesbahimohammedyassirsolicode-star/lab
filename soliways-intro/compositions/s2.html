@@ -1,0 +1,345 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Tajawal";
+      src: url("../assets/fonts/tajawal-400.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Tajawal";
+      src: url("../assets/fonts/tajawal-700.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Sora";
+      src: url("../assets/fonts/sora-300.woff2") format("woff2");
+      font-weight: 300;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Sora";
+      src: url("../assets/fonts/sora-600.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: block;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(90% 80% at 78% 42%, #0a1d3a 0%, #061020 46%, #04080f 100%);
+      font-family: "Sora", sans-serif;
+      color: #f4f7fb;
+    }
+    .s2-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(98, 204, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(98, 204, 255, 0.055) 1px, transparent 1px);
+      background-size: 120px 120px;
+      mask-image: radial-gradient(75% 70% at 62% 48%, rgba(0, 0, 0, 0.9), transparent 78%);
+      pointer-events: none;
+    }
+    .s2-video {
+      position: absolute;
+      inset: -6%;
+      will-change: transform, opacity;
+    }
+    .s2-video video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #s2-beams {
+      mix-blend-mode: screen;
+      opacity: 0.62;
+    }
+    #s2-particles {
+      mix-blend-mode: screen;
+      opacity: 0.5;
+    }
+    .s2-wash {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(55% 65% at 24% 58%, rgba(46, 125, 255, 0.2) 0%, rgba(46, 125, 255, 0) 70%),
+        linear-gradient(90deg, rgba(4, 8, 15, 0.92) 0%, rgba(4, 8, 15, 0.55) 38%, rgba(4, 8, 15, 0.08) 68%, rgba(4, 8, 15, 0.4) 100%),
+        linear-gradient(180deg, rgba(4, 8, 15, 0.5) 0%, rgba(4, 8, 15, 0) 26%, rgba(4, 8, 15, 0) 68%, rgba(4, 8, 15, 0.72) 100%);
+      pointer-events: none;
+    }
+    .s2-net {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .s2-net line {
+      stroke: rgba(98, 204, 255, 0.42);
+      stroke-width: 1.1;
+    }
+    .s2-net line.hot {
+      stroke: rgba(227, 190, 120, 0.5);
+      stroke-width: 1.2;
+    }
+    .s2-net circle {
+      fill: #9fe0ff;
+    }
+    .s2-net circle.hot {
+      fill: #f0d29a;
+    }
+    .s2-frame {
+      position: absolute;
+      inset: 0;
+      padding: 84px 120px 96px;
+    }
+    .s2-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.44em;
+      text-transform: uppercase;
+      color: #bcd6f2;
+    }
+    .s2-num {
+      color: #e3be78;
+      letter-spacing: 0.2em;
+    }
+    .s2-copy {
+      position: absolute;
+      left: 120px;
+      top: 356px;
+      width: 1010px;
+      direction: rtl;
+      text-align: right;
+    }
+    .s2-ar {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 700;
+      font-size: 74px;
+      line-height: 1.5;
+      color: #ffffff;
+      text-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
+    }
+    .s2-sub {
+      margin-top: 26px;
+      direction: ltr;
+      text-align: right;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: rgba(227, 190, 120, 0.88);
+    }
+    .s2-panel {
+      position: absolute;
+      left: 1268px;
+      top: 300px;
+      width: 512px;
+      height: 396px;
+      border: 1px solid rgba(98, 204, 255, 0.28);
+      background: rgba(6, 16, 32, 0.5);
+      box-shadow:
+        0 0 0 1px rgba(4, 8, 15, 0.5),
+        0 24px 90px rgba(0, 0, 0, 0.55),
+        0 0 70px rgba(46, 125, 255, 0.16);
+      overflow: hidden;
+    }
+    .s2-panel video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.82;
+    }
+    .s2-scan {
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(0deg, rgba(4, 8, 15, 0.22) 0px, rgba(4, 8, 15, 0.22) 1px, transparent 1px, transparent 4px);
+      pointer-events: none;
+    }
+    .s2-panel-edge {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 60px rgba(4, 8, 15, 0.75);
+      pointer-events: none;
+    }
+    .s2-bracket {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #e3be78;
+      border-style: solid;
+      border-width: 0;
+    }
+    .s2-bracket.tl { left: -1px; top: -1px; border-left-width: 2px; border-top-width: 2px; }
+    .s2-bracket.tr { right: -1px; top: -1px; border-right-width: 2px; border-top-width: 2px; }
+    .s2-bracket.bl { left: -1px; bottom: -1px; border-left-width: 2px; border-bottom-width: 2px; }
+    .s2-bracket.br { right: -1px; bottom: -1px; border-right-width: 2px; border-bottom-width: 2px; }
+    .s2-panel-label {
+      position: absolute;
+      left: 1268px;
+      top: 712px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(188, 214, 242, 0.72);
+    }
+    .s2-panel-label i {
+      display: block;
+      width: 46px;
+      height: 1px;
+      background: rgba(227, 190, 120, 0.7);
+    }
+    .s2-foot {
+      position: absolute;
+      left: 120px;
+      bottom: 96px;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(157, 178, 204, 0.7);
+    }
+    .s2-foot b {
+      color: rgba(98, 204, 255, 0.9);
+      font-weight: 400;
+    }
+  </style>
+  <div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+    <div class="s2-grid" data-layout-ignore></div>
+    <div class="s2-video" id="s2-beams">
+      <video id="s2-beams-v" class="clip" data-start="0" data-duration="7" data-media-start="0" src="../assets/video/s2a.mp4" muted playsinline></video>
+    </div>
+    <div class="s2-video" id="s2-particles">
+      <video id="s2-particles-v" class="clip" data-start="1.2" data-duration="5.8" data-media-start="0" src="../assets/video/s2b.mp4" muted playsinline></video>
+    </div>
+    <svg class="s2-net" id="s2-net" viewBox="0 0 1920 1080" fill="none" data-layout-ignore>
+      <g id="s2-lines">
+        <line x1="180" y1="260" x2="300" y2="420" />
+        <line x1="300" y1="420" x2="250" y2="620" />
+        <line x1="300" y1="420" x2="470" y2="520" />
+        <line x1="250" y1="620" x2="470" y2="520" />
+        <line x1="420" y1="300" x2="300" y2="420" />
+        <line x1="420" y1="300" x2="640" y2="380" />
+        <line x1="470" y1="520" x2="560" y2="700" />
+        <line x1="470" y1="520" x2="720" y2="600" />
+        <line x1="560" y1="700" x2="760" y2="840" />
+        <line x1="640" y1="380" x2="860" y2="300" />
+        <line x1="640" y1="380" x2="720" y2="600" />
+        <line x1="720" y1="600" x2="900" y2="520" />
+        <line x1="720" y1="600" x2="760" y2="840" />
+        <line x1="860" y1="300" x2="900" y2="520" />
+        <line x1="860" y1="300" x2="1000" y2="180" />
+        <line x1="900" y1="520" x2="980" y2="720" />
+        <line x1="900" y1="520" x2="1120" y2="420" />
+        <line x1="980" y1="720" x2="1180" y2="860" />
+        <line x1="1120" y1="420" x2="1200" y2="620" />
+        <line x1="1120" y1="420" x2="1320" y2="340" />
+        <line x1="1180" y1="860" x2="1380" y2="540" />
+        <line x1="1200" y1="620" x2="1380" y2="540" />
+        <line x1="1320" y1="340" x2="1380" y2="540" />
+        <line x1="1320" y1="340" x2="1420" y2="180" />
+        <line x1="1380" y1="540" x2="1480" y2="700" />
+        <line x1="1420" y1="180" x2="1600" y2="460" />
+        <line x1="1480" y1="700" x2="1600" y2="460" />
+        <line x1="1480" y1="700" x2="1660" y2="820" />
+        <line x1="1600" y1="460" x2="1720" y2="600" />
+        <line x1="1600" y1="460" x2="1780" y2="300" />
+        <line x1="1720" y1="600" x2="1660" y2="820" />
+        <line x1="250" y1="620" x2="180" y2="860" />
+        <line x1="180" y1="860" x2="520" y2="960" />
+        <line x1="520" y1="960" x2="760" y2="840" />
+        <line x1="1000" y1="180" x2="1200" y2="120" />
+        <line x1="1200" y1="120" x2="1420" y2="180" />
+        <line x1="980" y1="720" x2="1180" y2="860" />
+      </g>
+      <g id="s2-nodes">
+        <circle cx="180" cy="260" r="3" />
+        <circle cx="300" cy="420" r="3.6" />
+        <circle cx="250" cy="620" r="3" />
+        <circle cx="420" cy="300" r="3" />
+        <circle cx="470" cy="520" r="4" />
+        <circle cx="560" cy="700" r="3" />
+        <circle cx="640" cy="380" r="3.4" />
+        <circle cx="720" cy="600" r="3" />
+        <circle cx="860" cy="300" r="3.6" />
+        <circle cx="900" cy="520" r="4.2" />
+        <circle cx="980" cy="720" r="3" />
+        <circle cx="1120" cy="420" r="3.8" />
+        <circle cx="1200" cy="620" r="3" />
+        <circle cx="1320" cy="340" r="3.4" />
+        <circle cx="1380" cy="540" r="4.2" />
+        <circle cx="1480" cy="700" r="3" />
+        <circle cx="1600" cy="460" r="3.8" />
+        <circle cx="1720" cy="600" r="3" />
+        <circle cx="1780" cy="300" r="3" />
+        <circle cx="1660" cy="820" r="3" />
+        <circle cx="1180" cy="860" r="3" />
+        <circle cx="760" cy="840" r="3" />
+        <circle cx="520" cy="180" r="2.6" />
+        <circle cx="1000" cy="180" r="2.6" />
+        <circle cx="1420" cy="180" r="2.6" />
+        <circle cx="180" cy="860" r="3" />
+        <circle cx="520" cy="960" r="2.6" />
+        <circle cx="1200" cy="120" r="2.6" />
+      </g>
+      <g id="s2-hot">
+        <circle class="hot" cx="900" cy="520" r="5" />
+        <circle class="hot" cx="1380" cy="540" r="5" />
+        <circle class="hot" cx="470" cy="520" r="4.4" />
+      </g>
+    </svg>
+    <div class="s2-wash" data-layout-ignore></div>
+    <div class="s2-frame">
+      <div class="s2-eyebrow" id="s2-eyebrow"><span class="s2-num">02</span><span>Innovation</span></div>
+      <div class="s2-copy">
+        <div class="s2-ar" id="s2-ar">التكنولوجيا ولات جزء من مستقبلنا.</div>
+        <div class="s2-sub" id="s2-sub">Technology is our future</div>
+      </div>
+      <div class="s2-panel" id="s2-panel">
+        <video id="s2-hands" class="clip" data-start="0.9" data-duration="6.1" data-media-start="0.4" src="../assets/video/s2c.mp4" muted playsinline></video>
+        <div class="s2-scan" data-layout-ignore></div>
+        <div class="s2-panel-edge" data-layout-ignore></div>
+        <span class="s2-bracket tl"></span>
+        <span class="s2-bracket tr"></span>
+        <span class="s2-bracket bl"></span>
+        <span class="s2-bracket br"></span>
+      </div>
+      <div class="s2-panel-label" id="s2-panel-label"><i></i>Digital · Data · Ideas</div>
+      <div class="s2-foot" id="s2-foot"><b>SOLIWAYS</b> &nbsp;·&nbsp; TANGIER 2027</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s2-beams", { scale: 1.12, opacity: 0 }, { scale: 1.02, opacity: 0.62, duration: 2.4, ease: "power2.out" }, 0);
+    tl.fromTo("#s2-particles", { scale: 1.16, opacity: 0 }, { scale: 1.02, opacity: 0.5, duration: 2.6, ease: "power2.out" }, 0.5);
+    tl.fromTo("#s2-beams", { xPercent: 0 }, { xPercent: -3, duration: 7, ease: "none" }, 0);
+    tl.fromTo("#s2-particles", { yPercent: 1.5 }, { yPercent: -2.5, duration: 6.5, ease: "none" }, 0);
+    tl.fromTo("#s2-lines line", { strokeDasharray: 900, strokeDashoffset: 900, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 1.8, ease: "power2.inOut", stagger: { each: 0.035, from: "start" } }, 0.25);
+    tl.fromTo("#s2-nodes circle", { opacity: 0, scale: 0 }, { opacity: 0.9, scale: 1, duration: 0.5, ease: "back.out(2)", stagger: 0.03, transformOrigin: "center center" }, 0.9);
+    tl.fromTo("#s2-hot circle", { opacity: 0.25, scale: 0.8 }, { opacity: 1, scale: 1.5, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: 1, transformOrigin: "center center" }, 1.4);
+    tl.fromTo("#s2-eyebrow", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" }, 0.5);
+    tl.fromTo("#s2-ar", { opacity: 0, y: 30, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.0, ease: "power3.out" }, 0.75);
+    tl.fromTo("#s2-sub", { opacity: 0, y: 14 }, { opacity: 0.92, y: 0, duration: 0.8, ease: "power3.out" }, 1.35);
+    tl.fromTo("#s2-panel", { opacity: 0, x: 40, scale: 0.97 }, { opacity: 1, x: 0, scale: 1, duration: 1.0, ease: "power3.out" }, 1.1);
+    tl.fromTo("#s2-panel-label", { opacity: 0, y: 10 }, { opacity: 0.9, y: 0, duration: 0.7, ease: "power2.out" }, 1.9);
+    tl.fromTo("#s2-foot", { opacity: 0 }, { opacity: 0.8, duration: 0.8, ease: "power2.out" }, 2.2);
+    tl.fromTo("#s2-panel", { y: 0 }, { y: -10, duration: 4.2, ease: "sine.inOut" }, 2.6);
+    window.__timelines["s2"] = tl;
+  </script>
+</template>

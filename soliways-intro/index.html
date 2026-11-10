@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Sora";
+        src: url("assets/fonts/sora-300.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Sora";
+        src: url("assets/fonts/sora-400.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Sora";
+        src: url("assets/fonts/sora-600.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Sora";
+        src: url("assets/fonts/sora-800.woff2") format("woff2");
+        font-weight: 800;
+        font-style: normal;
+        font-display: block;
+      }
+      :root {
+        --ground: #04080f;
+        --navy: #071120;
+        --ink: #f4f7fb;
+        --blue: #2e7dff;
+        --cyan: #62ccff;
+        --gold: #e3be78;
+        --muted: #9db2cc;
+        --font-display: "Sora", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--ground);
+        font-family: var(--font-display);
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #global-grade {
+        position: absolute;
+        inset: 0;
+        z-index: 90;
+        pointer-events: none;
+        background:
+          radial-gradient(120% 90% at 50% 45%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.42) 100%),
+          linear-gradient(180deg, rgba(3, 8, 16, 0.18) 0%, rgba(3, 8, 16, 0) 22%, rgba(3, 8, 16, 0) 74%, rgba(3, 8, 16, 0.32) 100%);
+      }
+      #global-grain {
+        position: absolute;
+        inset: -10%;
+        z-index: 91;
+        pointer-events: none;
+        opacity: 0.055;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.9'/></svg>");
+        background-size: 220px 220px;
+      }
+      #s1-host,
+      #s2-host,
+      #s3-host,
+      #s4-host,
+      #s5-host,
+      #s6-host {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="40" data-width="1920" data-height="1080">
+      <div
+        id="s1-host"
+        data-composition-id="s1"
+        data-composition-src="compositions/s1.html"
+        data-start="0"
+        data-duration="6"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="s2-host"
+        data-composition-id="s2"
+        data-composition-src="compositions/s2.html"
+        data-start="6"
+        data-duration="7"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="s3-host"
+        data-composition-id="s3"
+        data-composition-src="compositions/s3.html"
+        data-start="13"
+        data-duration="6"
+        data-track-index="3"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="s4-host"
+        data-composition-id="s4"
+        data-composition-src="compositions/s4.html"
+        data-start="19"
+        data-duration="7"
+        data-track-index="4"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="s5-host"
+        data-composition-id="s5"
+        data-composition-src="compositions/s5.html"
+        data-start="26"
+        data-duration="6"
+        data-track-index="5"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="s6-host"
+        data-composition-id="s6"
+        data-composition-src="compositions/s6.html"
+        data-start="32"
+        data-duration="8"
+        data-track-index="6"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <audio id="music-bed" class="clip" data-start="0" data-duration="40" data-volume="0.42" data-fade-in="1.2" data-fade-out="1.6" src="assets/audio/music.mp3"></audio>
+
+      <audio id="vo-1" class="clip" data-start="0.55" data-duration="5.35" data-volume="1" src="assets/audio/vo1.mp3"></audio>
+      <audio id="vo-2" class="clip" data-start="13.25" data-duration="1.5" data-volume="1" src="assets/audio/vo2.mp3"></audio>
+      <audio id="vo-3" class="clip" data-start="14.85" data-duration="4.65" data-volume="1" src="assets/audio/vo3.mp3"></audio>
+      <audio id="vo-4" class="clip" data-start="19.65" data-duration="5.28" data-volume="1" src="assets/audio/vo4.mp3"></audio>
+      <audio id="vo-5" class="clip" data-start="24.95" data-duration="6.15" data-volume="1" src="assets/audio/vo5.mp3"></audio>
+      <audio id="vo-6" class="clip" data-start="31.25" data-duration="0.86" data-volume="1" src="assets/audio/vo6.mp3"></audio>
+      <audio id="vo-7" class="clip" data-start="32.25" data-duration="4.87" data-volume="1" src="assets/audio/vo7.mp3"></audio>
+      <audio id="vo-8" class="clip" data-start="37.25" data-duration="2.23" data-volume="1" src="assets/audio/vo8.mp3"></audio>
+
+      <audio id="sfx-air" class="clip" data-start="0.25" data-duration="2.52" data-volume="0.35" src="assets/audio/sfx-air.mp3"></audio>
+      <audio id="sfx-whoosh-1" class="clip" data-start="5.82" data-duration="1.33" data-volume="0.5" src="assets/audio/sfx-whoosh.mp3"></audio>
+      <audio id="sfx-whoosh-2" class="clip" data-start="12.82" data-duration="1.76" data-volume="0.55" src="assets/audio/sfx-whoosh2.mp3"></audio>
+      <audio id="sfx-logo" class="clip" data-start="13.42" data-duration="4" data-volume="0.55" src="assets/audio/sfx-impact.mp3"></audio>
+      <audio id="sfx-whoosh-3" class="clip" data-start="18.9" data-duration="1.33" data-volume="0.45" src="assets/audio/sfx-whoosh.mp3"></audio>
+      <audio id="sfx-whoosh-4" class="clip" data-start="25.82" data-duration="1.76" data-volume="0.5" src="assets/audio/sfx-whoosh2.mp3"></audio>
+      <audio id="sfx-riser" class="clip" data-start="31.0" data-duration="6.75" data-volume="0.5" src="assets/audio/sfx-riser.mp3"></audio>
+      <audio id="sfx-endcard" class="clip" data-start="32.05" data-duration="4" data-volume="0.4" src="assets/audio/sfx-impact.mp3"></audio>
+      <audio id="sfx-final" class="clip" data-start="38.95" data-duration="4" data-volume="0.72" src="assets/audio/sfx-impact.mp3"></audio>
+      <audio id="sfx-tick-1" class="clip" data-start="6.5" data-duration="0.18" data-volume="0.22" src="assets/audio/sfx-tick.mp3"></audio>
+      <audio id="sfx-tick-2" class="clip" data-start="13.5" data-duration="0.18" data-volume="0.22" src="assets/audio/sfx-tick.mp3"></audio>
+      <audio id="sfx-tick-3" class="clip" data-start="19.85" data-duration="0.18" data-volume="0.22" src="assets/audio/sfx-tick.mp3"></audio>
+      <audio id="sfx-tick-4" class="clip" data-start="26.1" data-duration="0.18" data-volume="0.22" src="assets/audio/sfx-tick.mp3"></audio>
+      <audio id="sfx-tick-5" class="clip" data-start="32.3" data-duration="0.18" data-volume="0.22" src="assets/audio/sfx-tick.mp3"></audio>
+
+      <div id="global-grade"></div>
+      <div id="global-grain"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
