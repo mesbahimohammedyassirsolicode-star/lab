@@ -1,18 +1,50 @@
 # lab-poo
 
-## Objectifs
+## 1. Besoin du projet technique
 
-Ce lab présente six notions de la programmation orientée objet (POO) en PHP.
-Chaque notion a un exemple simple. On peut le lancer directement dans le terminal.
+Le problème : le projet de gestion de restaurants grandit. Sans POO, le code est difficile à organiser, à tester et à réutiliser.
 
-- **Classe abstraite :** créer un modèle. On ne peut pas l'utiliser directement.
-- **Interface :** définir les méthodes qu'une classe doit avoir.
-- **Héritage :** réutiliser les propriétés et les méthodes d'une autre classe.
-- **Polymorphisme :** utiliser la même méthode. Le résultat dépend de l'objet.
-- **Encapsulation :** protéger les données d'une classe.
-- **Méthodes et propriétés statiques :** utiliser des éléments liés à la classe.
+Pourquoi ce lab est nécessaire : il montre les bases de la programmation orientée objet en PHP, avec des exemples concrets liés aux restaurants.
 
-Les exemples sont des démonstrations seules. Ils sont liés au projet de gestion de restaurants : la carte, les commandes, les paiements et les tables. Ces exemples ne sont pas dans l'application Laravel.
+Ce que ça apporte au projet technique :
+- Code plus clair et modulaire
+- Réutilisation via héritage et interfaces
+- Sécurité des données via encapsulation
+- Flexibilité via polymorphisme
+
+L'IA peut améliorer : connecter les 6 notions dans un mini-domaine cohérent, ajouter des tests, ou préparer une migration vers Laravel.
+
+## 2. Notions et techniques à apprendre
+
+Notions de base :
+- Classe abstraite : modèle non instanciable
+- Interface : contrat de méthodes
+- Héritage : réutiliser propriétés/méthodes
+- Polymorphisme : même appel, comportements différents
+- Encapsulation : protéger les données
+- Méthodes/propriétés statiques : logique liée à la classe
+
+Techniques :
+- Modéliser un domaine avec des classes
+- Choisir entre abstraction, interface et héritage
+- Cacher l'état interne, exposer une API claire
+- Utiliser le statique à bon escient
+
+L'IA peut améliorer : glossaire A1, schémas UML simplifiés, exercices guidés.
+
+## 3. Réalisation attendue
+
+Forme :
+- 6 dossiers d'exemples, un par notion
+- Chaque dossier contient `example.php` et un `README.md`
+- Un tableau de synthèse dans le README principal
+
+Contenu de l'exemple pratique :
+- Script PHP simple qui démontre la notion
+- Contexte restaurant : carte, commande, paiement, table
+- Commentaire qui explique le « pourquoi »
+
+L'IA est libre de proposer : un mini-projet qui utilise les 6 notions ensemble, des tests, ou une base pour Laravel.
 
 ## Démarrage rapide
 
