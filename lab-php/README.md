@@ -1,14 +1,45 @@
 # lab-php
 
-## Objectifs
+## 1. Besoin du projet technique
 
-Ce lab présente trois notions de PHP. Chaque notion a un exemple court. On peut le lancer dans le terminal.
+Le problème : le code PHP devient vite difficile à lire et à maintenir quand il grandit. Les noms se répètent, les erreurs ne sont pas claires, et le code se duplique.
 
-- **La gestion des erreurs et des exceptions :** trouver une situation impossible. On la traite avec `try`, `catch` et `finally`.
-- **Les namespaces :** ranger les classes. On évite les problèmes de noms.
-- **Les traits :** réutiliser le même code dans plusieurs classes. On n'utilise pas l'héritage multiple.
+Pourquoi ce lab est nécessaire : il montre des outils simples de PHP 8 pour structurer le code. Le lab aide à écrire du code propre, lisible et réutilisable.
 
-Les exemples sont des démonstrations seules. Ils ne sont pas dans une application.
+Ce que ça apporte au projet technique : 
+- Moins de bugs grâce à une gestion claire des erreurs.
+- Un code organisé avec les namespaces.
+- Moins de duplication avec les traits.
+
+L’IA peut améliorer : choisir de meilleurs exemples concrets, ajouter des tests simples, ou connecter les 3 notions dans un mini-projet.
+
+## 2. Notions et techniques à apprendre
+
+Notions de base :
+- Les erreurs et exceptions en PHP : try / catch / finally
+- Les namespaces : organiser le code par dossiers logiques
+- Les traits : partager des méthodes entre classes sans héritage multiple
+
+Techniques :
+- Détecter et traiter les erreurs proprement
+- Éviter les conflits de noms
+- Réutiliser du code de façon sûre
+
+L’IA peut améliorer : ajouter schémas simples, un glossaire A1, ou des exercices guidés.
+
+## 3. Réalisation attendue
+
+Forme :
+- 3 dossiers d’exemples, un par notion
+- Chaque dossier contient `example.php` et un `README.md` court
+- Un README principal qui résume tout
+
+Contenu de l’exemple pratique :
+- Un script qui montre la notion en action
+- Un commentaire simple qui explique le « pourquoi »
+- Une commande claire pour lancer l’exemple
+
+L’IA est libre de proposer : un mini-projet qui utilise les 3 notions ensemble, des tests, ou une petite démo web.
 
 ## Démarrage rapide
 
