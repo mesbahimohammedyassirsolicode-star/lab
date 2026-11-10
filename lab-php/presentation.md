@@ -8,8 +8,8 @@ size: 16:9
 # lab-php
 ## Error Handling, Namespaces, and Traits
 
-**Student:** [Name]  
-**Supervisor:** [Name]  
+**Student:** Mohammed Yassir Mesbahi  
+**Supervisor:ES-SARRAJ Fouad
 **Course / group:** [To be completed]
 
 ---
