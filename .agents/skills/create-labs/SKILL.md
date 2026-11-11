@@ -14,6 +14,7 @@ Use this skill when you need to generate, update, or adapt lab content based on 
 ## Inputs and context
 
 - Read the target lab README and the available generic plan in the workspace.
+- When creating a lab README, use the shared template at `assets/template-readme.md` as the starting structure; adapt its placeholders to the actual lab and keep its sections unless they do not apply.
 - If a file named `template-plan.md` is missing, search for the workspace's generic plan and use it without claiming it has a different name.
 - Keep the existing lab title/slug unchanged in the `lab-*` format. Do not replace it with a reformulated title.
 - Adapt the wording to the real objectives, concepts, and constraints described in the README.
