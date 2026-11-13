@@ -1,8 +1,10 @@
 # Product Backlog – Blog des Lauréats
 
-Le projet consiste à développer une plateforme web appelée « Blog des Lauréats », destinée à faciliter le partage d'expériences, de connaissances et de conseils entre les lauréats et les étudiants.
+Nous voulons créer un blog pour les lauréats, mais nous n’avons pas de liste de Product Backlog et Scrum ne documente pas cette phase (Sprint 0).
 
-Notre objectif est de réaliser ce projet en utilisant la méthodologie Agile Scrum.
+Ce lab permet de préparer le projet avant le développement. Il aide à identifier les utilisateurs concernés, comprendre leurs besoins et construire une première liste de fonctionnalités pour le blog.
+
+
 
 ## 1. Besoin du projet technique
 
@@ -32,3 +34,39 @@ Cette approche nous permettra de :
 - Une priorisation plus pertinente des User Stories.
 - Une meilleure préparation du Sprint Planning.
 - Une réduction du risque de développer des fonctionnalités inutiles.
+## 2. Réalisation attendue
+
+**Travail à réaliser :**
+
+### 1. Diagramme de contexte
+
+Réaliser un diagramme de contexte pour représenter le système « Blog des Lauréats » et identifier les différents acteurs externes qui interagissent avec lui.
+
+Ce diagramme permettra de :
+- Délimiter le périmètre du projet.
+- Identifier les acteurs concernés (étudiants, lauréats, administrateur).
+- Représenter les interactions entre les acteurs et le système.
+- Comprendre les échanges d'informations avec la plateforme.
+
+### 2. Phase d'empathie (Design Thinking)
+
+Réaliser une étude d'empathie afin de comprendre les besoins, les attentes et les difficultés des futurs utilisateurs du Blog des Lauréats.
+
+Cette phase comprend :
+- Identification des utilisateurs cibles.
+- Préparation d'un guide d'entretien.
+- Réalisation d'interviews auprès des utilisateurs potentiels.
+- Collecte et analyse des réponses.
+- Élaboration d'une Empathy Map.
+- Identification des principaux besoins et problèmes rencontrés.
+
+**Livrables attendus :**
+- Un diagramme de contexte du Blog des Lauréats.
+- Un guide d'entretien.
+- Une synthèse des interviews.
+- Une ou plusieurs Empathy Maps.
+- Une liste initiale des besoins utilisateurs.
+
+**Résultat attendu :**
+
+Disposer d'une meilleure compréhension du contexte du projet et des besoins des utilisateurs afin de préparer la construction du Product Backlog avant le démarrage du premier Sprint Scrum.
