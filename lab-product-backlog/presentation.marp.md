@@ -152,21 +152,8 @@ flowchart LR
 
 ---
 
-## Prochaines étapes
 
-### Phase d’empathie
 
-- Préparer le guide d’entretien
-- Réaliser les interviews
-- Construire l’Empathy Map
-
-### Vers le backlog final
-
-- Lister les besoins utilisateurs
-- Écrire les User Stories
-- Prioriser le Product Backlog
-
----
 
 <!-- _class: empathy -->
 
